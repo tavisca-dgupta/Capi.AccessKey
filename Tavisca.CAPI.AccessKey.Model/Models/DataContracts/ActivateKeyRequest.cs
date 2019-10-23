@@ -6,5 +6,6 @@
         public string AccessKey { get; set; }
         public bool IskeyActive { get; set; }
         public string UpdatedBy { get; set; }
+        public string ClientId { get; set; }
     }
 }
