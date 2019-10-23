@@ -55,5 +55,23 @@ namespace Tavisca.CAPI.AccessKey.MockProvider.DatabaseProvider
             }
             return null;//write custom exception
          }
+        public async Task<AccessKeyModel> ActivateKey(AccessKeyModel client)
+        {
+            var clients = await JsonFileReader.ReadAllJsonObject(_filename);
+            for (int i = 0; i < clients.Count; i++)
+            {
+                if (clients[i].ClientId == client.ClientId)
+                {
+                    clients[i].IskeyActive = true;
+                    break;
+                }
+            }
+            var activate = await JsonFileWriter.WriteToJsonFile(clients);
+            if (activate == true)
+            {
+                return await GetClientById(client.ClientId);
+            }
+            return null;    //TODO: write custom exception
+        }
     }
 }
