@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Tavisca.CAPI.AccessKey.MockProvider\Tavisca.CAPI.AccessKey.MockProvider.csproj" />
+    <ProjectReference Include="..\Tavisca.CAPI.AccessKey.Model\Tavisca.CAPI.AccessKey.Model.csproj" />
+    <ProjectReference Include="..\Tavisca.CAPI.AccessKey.Services\Tavisca.CAPI.AccessKey.Services.csproj" />
+  </ItemGroup>
+
+</Project>
