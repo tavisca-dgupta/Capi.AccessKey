@@ -16,20 +16,30 @@ namespace Tavisca.CAPI.AccessKey.MockProvider.DatabaseProvider.Utility
 
         public static Task<List<GetAllKeysDataResponse>> ReadAllJsonObject(string filename)
         {
-            using (var filepath = typeof(JsonFileReader).Assembly.GetManifestResourceStream(string.Concat(_basePath, filename)))
-            {
-                var json= ReadAllText(filepath);
-                List<GetAllKeysDataResponse> keyList = new List<GetAllKeysDataResponse>();
-                if (json!=null)
-                {
-                    keyList = JsonConvert.DeserializeObject<List<GetAllKeysDataResponse>>(json);
-                }
+            //using (var filepath = typeof(JsonFileReader).Assembly.GetManifestResourceStream(string.Concat(_basePath, filename)))
+            //{
 
-                return Task.FromResult(keyList);
+            //    var json= ReadAllText(filepath);
+            //    List<GetAllKeysDataResponse> keyList = new List<GetAllKeysDataResponse>();
+            //    if (json!=null)
+            //    {
+            //        keyList = JsonConvert.DeserializeObject<List<GetAllKeysDataResponse>>(json);
+            //    }
+
+            //    return Task.FromResult(keyList);
+            //}
+            string filepath = "C:/Tavisca.CAPI.AccessKey/Tavisca.CAPI.AccessKey.MockProvider/DatabaseProvider/JsonFile/MockAccessKeyData.json";
+            var json = ReadAllText(filepath);
+            List<GetAllKeysDataResponse> keyList = new List<GetAllKeysDataResponse>();
+            if (json != null)
+            {
+                keyList = JsonConvert.DeserializeObject<List<GetAllKeysDataResponse>>(json);
             }
+
+            return Task.FromResult(keyList);
         }
 
-        private static string ReadAllText(Stream filepath)
+        private static string ReadAllText(string filepath)
         {
             using (StreamReader r = new StreamReader(filepath))
             {
