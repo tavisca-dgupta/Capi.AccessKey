@@ -4,6 +4,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Tavisca.CAPI.AccessKey.MockProvider.DatabaseProvider.Utility;
 using Tavisca.CAPI.AccessKey.MockProvider.Tanslator;
+using Tavisca.CAPI.AccessKey.MockProvider.Tanslators;
 using Tavisca.CAPI.AccessKey.Model.Interfaces;
 using Tavisca.CAPI.AccessKey.Model.Models;
 using Tavisca.CAPI.AccessKey.Model.Models.DataApiModel;
@@ -55,6 +56,29 @@ namespace Tavisca.CAPI.AccessKey.MockProvider.DatabaseProvider
             }
             return null;//write custom exception
          }
+
+        public async Task<bool> IsKeyPresent(string clientId)
+        {
+            List<AccessKeyModel> clients = await GetAllClients();
+            for (int i = 0; i < clients.Count; i++)
+            {
+                if (clients[i].ClientId.Equals(clientId))
+                    return true;
+            }
+            return false;
+        }
+
+        public async Task<AccessKeyModel> CreateKey(AccessKeyModel key)
+        {
+            var clients = await JsonFileReader.ReadAllJsonObject(_filename);
+            GetAllKeysDataResponse accessKey = key.ToGetAllKeysResponseModel();
+            accessKey.UpdateDate = System.DateTime.Today.ToString("dd-MM-yyyy");
+            clients.Add(accessKey);
+            var createStatus = await JsonFileWriter.WriteToJsonFile(clients);
+            if (createStatus)
+                return key;
+            return null;
+        }
         public async Task<AccessKeyModel> ActivateKey(AccessKeyModel client)
         {
             var clients = await JsonFileReader.ReadAllJsonObject(_filename);

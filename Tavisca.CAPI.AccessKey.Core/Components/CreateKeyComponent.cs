@@ -18,13 +18,13 @@ namespace Tavisca.CAPI.AccessKey.Core.Components
 
         public string GenerateAccessKey()
         {
-            Guid accessKey = new Guid();
+            Guid accessKey = Guid.NewGuid();
             return accessKey.ToString();
         }
 
         public async Task<AccessKeyModel> Create(AccessKeyModel accessKey)
         {
-            if(await _databaseAdapter.IsKeyPresent(accessKey.ClientId))
+            if(!(await _databaseAdapter.IsKeyPresent(accessKey.ClientId)))
             {
                 accessKey.AccessKey = GenerateAccessKey();
                 accessKey.IskeyActive = false;

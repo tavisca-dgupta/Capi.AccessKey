@@ -14,11 +14,13 @@ namespace Tavisca.CAPI.AccessKey.Services.Services
         private IDatabaseAdapter _databaseAdapter;
         private IDeactivateKey _deactivateKey;
         private IActivateKey _activateKey;
+        private ICreateKey _createKey;
 
-        public AccessKeyService(IDatabaseAdapter databaseAdapter,IDeactivateKey deactivateKey)
+        public AccessKeyService(IDatabaseAdapter databaseAdapter,IDeactivateKey deactivateKey,ICreateKey createKey)
         {
             _databaseAdapter = databaseAdapter;
             _deactivateKey = deactivateKey;
+            _createKey = createKey;
         }
 
         public async Task<List<GetAllKeysResponse>> GetAllKeys()
@@ -39,9 +41,11 @@ namespace Tavisca.CAPI.AccessKey.Services.Services
             return accessKey.ToActivateKeyResponse();
         }
 
-        public bool CreateKey()
+        public async Task<AccessKeyResponse> CreateKey(AccessKeyRequest key)
         {
-            throw new NotImplementedException();
+            AccessKeyModel accessKey = key.ToAccessKeyModel();
+            accessKey = await _createKey.Create(accessKey);
+            return accessKey.ToAccessKeyResponse();
         }
 
         public async Task<DeactivateKeyResponse> DeactivateKey(DeactivateKeyRequest key)

@@ -31,9 +31,12 @@ namespace Tavisca.CAPI.AccessKey.Web.Controllers
 
         [HttpPost]
         [Route("create")]
-        public async Task<ActionResult<AccessKeyResponse>> Create([FromBody] AccessKeyRequest key)
+        public async Task<ActionResult<AccessKeyResponse>> Post([FromBody] AccessKeyRequest key)
         {
-            
+            var result = await _accessKeyService.CreateKey(key);
+            if (result == null)
+                return BadRequest();
+            return Ok(result);
         }
         [HttpPut]
         [Route("activate/{clientId}")]
@@ -48,7 +51,7 @@ namespace Tavisca.CAPI.AccessKey.Web.Controllers
         [Route("deactivate/{clientId}")]
         public async Task<ActionResult<DeactivateKeyResponse>> Put(string clientId,[FromBody] DeactivateKeyRequest keyRequest)
         {
-            var result = await _accessKeyService.CreateKey(key);
+            var result = await _accessKeyService.DeactivateKey(keyRequest);
             if (result == null)
                 return BadRequest();
             return Ok(result);
