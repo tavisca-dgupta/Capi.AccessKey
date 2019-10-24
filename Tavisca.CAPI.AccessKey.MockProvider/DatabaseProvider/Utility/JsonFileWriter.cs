@@ -13,14 +13,19 @@ namespace Tavisca.CAPI.AccessKey.MockProvider.DatabaseProvider.Utility
     public class JsonFileWriter
     {
         private static readonly string _basePath = Assembly.GetExecutingAssembly().GetName().Name + ".DatabaseProvider.JsonFile.";
-        private static string filename = "MockAccessKeyData.json";
+        private static string _filename = "MockAccessKeyData.json";
 
         public static Task<bool> WriteToJsonFile(List<GetAllKeysDataResponse> clients)
         {
-            string filepath = string.Concat(_basePath, filename);
+            string filepath = "C:/Tavisca.CAPI.AccessKey/Tavisca.CAPI.AccessKey.MockProvider/DatabaseProvider/JsonFile/MockAccessKeyData.json";
+            //using (var filepath = typeof(JsonFileWriter).Assembly.GetManifestResourceStream(string.Concat(_basePath, _filename)))
+            //{
+            //    var convertedJson = JsonConvert.SerializeObject(clients, Formatting.Indented);
+            //    return Task.FromResult(Write(filepath, convertedJson));
+            //}
             var convertedJson = JsonConvert.SerializeObject(clients, Formatting.Indented);
             return Task.FromResult(Write(filepath, convertedJson));
-            
+
         }
 
         private static bool Write(string filepath, string data)
@@ -30,12 +35,18 @@ namespace Tavisca.CAPI.AccessKey.MockProvider.DatabaseProvider.Utility
                 File.WriteAllText(filepath, data);
                 return true;
             }
-#pragma warning disable CS0168 // The variable 'e' is declared but never used
             catch (Exception e)
-#pragma warning restore CS0168 // The variable 'e' is declared but never used
             {
                 throw new FileNotFoundException();
             }
+
+            //using (StreamWriter streamWriter = new StreamWriter(filepath))
+            //{
+
+            //    streamWriter.WriteLine(data);
+            //    //r.WriteAsync(data);
+            //    return true;
+            //}
         }
     }
 }
