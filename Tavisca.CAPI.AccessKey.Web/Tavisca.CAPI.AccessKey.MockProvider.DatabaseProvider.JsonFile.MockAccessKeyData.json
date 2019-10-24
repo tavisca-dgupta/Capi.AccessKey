@@ -5,7 +5,7 @@
     "ProgramGroup": "Asia pacific",
     "Program": "neo card",
     "AccessKey": "ad9ff893-bba2-44be-b961-63ceccab24a8",
-    "IskeyActive": false,
+    "IskeyActive": true,
     "CreateDate": "12/07/2016",
     "UpdateDate": "01/03/2018",
     "UpdatedBy": "Anil kadam"
@@ -16,7 +16,7 @@
     "ProgramGroup": "North America",
     "Program": "extra loyalty points",
     "AccessKey": "f6640278-453b-4c11-9302-9d189279bb23",
-    "IskeyActive": false,
+    "IskeyActive": true,
     "CreateDate": "07/07/2016",
     "UpdateDate": "01/03/2018",
     "UpdatedBy": "Anil kadam"

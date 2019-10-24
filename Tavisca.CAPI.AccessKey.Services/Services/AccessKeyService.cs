@@ -15,10 +15,11 @@ namespace Tavisca.CAPI.AccessKey.Services.Services
         private IDeactivateKey _deactivateKey;
         private IActivateKey _activateKey;
 
-        public AccessKeyService(IDatabaseAdapter databaseAdapter,IDeactivateKey deactivateKey)
+        public AccessKeyService(IDatabaseAdapter databaseAdapter,IDeactivateKey deactivateKey,IActivateKey activateKey)
         {
             _databaseAdapter = databaseAdapter;
             _deactivateKey = deactivateKey;
+            _activateKey = activateKey;
         }
 
         public async Task<List<GetAllKeysResponse>> GetAllKeys()
