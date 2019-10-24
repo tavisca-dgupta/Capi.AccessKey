@@ -11,7 +11,7 @@ namespace Tavisca.CAPI.AccessKey.Model.Interfaces
     {
         Task<List<GetAllKeysResponse>> GetAllKeys();
         bool CreateKey();
-        bool ActivateKey();
+        Task<ActivateKeyResponse> ActivateKey(ActivateKeyRequest key);
         Task<DeactivateKeyResponse> DeactivateKey(DeactivateKeyRequest key);
     }
 }
