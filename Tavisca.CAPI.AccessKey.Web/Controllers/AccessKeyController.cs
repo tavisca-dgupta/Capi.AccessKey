@@ -28,6 +28,16 @@ namespace Tavisca.CAPI.AccessKey.Web.Controllers
                 return NotFound();
             return Ok(result);
         }
+
+        [HttpPost]
+        [Route("create")]
+        public async Task<ActionResult<AccessKeyResponse>> Post([FromBody] AccessKeyRequest key)
+        {
+            var result = await _accessKeyService.CreateKey(key);
+            if (result == null)
+                return BadRequest();
+            return Ok(result);
+        }
         [HttpPut]
         [Route("activate/{clientId}")]
         public async Task<ActionResult<ActivateKeyResponse>> Activate(string clientId, [FromBody] ActivateKeyRequest accessKey)
@@ -43,7 +53,7 @@ namespace Tavisca.CAPI.AccessKey.Web.Controllers
         {
             var result = await _accessKeyService.DeactivateKey(keyRequest);
             if (result == null)
-                return NotFound();
+                return BadRequest();
             return Ok(result);
         }
     }

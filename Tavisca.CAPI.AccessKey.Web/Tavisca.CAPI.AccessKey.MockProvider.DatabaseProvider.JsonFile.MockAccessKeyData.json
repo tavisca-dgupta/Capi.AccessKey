@@ -53,5 +53,16 @@
     "CreateDate": "10/07/2016",
     "UpdateDate": "01/03/2018",
     "UpdatedBy": "Anil kadam"
+  },
+  {
+    "ClientId": "381ddhad",
+    "ClientName": "Linkedin",
+    "ProgramGroup": null,
+    "Program": null,
+    "AccessKey": "9d33f31f-92ad-4e73-bd9a-b8132a7151a9",
+    "IskeyActive": false,
+    "CreateDate": null,
+    "UpdateDate": "24-10-2019",
+    "UpdatedBy": "ankit"
   }
 ]
