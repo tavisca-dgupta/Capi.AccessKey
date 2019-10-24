@@ -10,6 +10,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
+using Tavisca.CAPI.AccessKey.Core.Components;
 using Tavisca.CAPI.AccessKey.MockProvider.DatabaseProvider;
 using Tavisca.CAPI.AccessKey.Model.Interfaces;
 using Tavisca.CAPI.AccessKey.Services.Services;
@@ -30,6 +31,8 @@ namespace Tavisca.CAPI.AccessKey.Web
         {
             services.AddSingleton<IAccessKeyService, AccessKeyService>();
             services.AddSingleton<IDatabaseAdapter, MockAccessKeyDatabase>();
+            services.AddSingleton<IDeactivateKey, DeactivateKeyComponents>();
+            services.AddSingleton<IActivateKey, ActivateKeyComponents>();
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
         }
 

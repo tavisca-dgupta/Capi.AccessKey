@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using Tavisca.CAPI.AccessKey.Model.Models;
@@ -11,10 +12,13 @@ namespace Tavisca.CAPI.AccessKey.MockProvider.DatabaseProvider.Utility
 {
     public class JsonFileWriter
     {
+        private static readonly string _basePath = Assembly.GetExecutingAssembly().GetName().Name + ".DatabaseProvider.JsonFile.";
+        private static string filename = "MockAccessKeyData.json";
+
         public static Task<bool> WriteToJsonFile(List<GetAllKeysDataResponse> clients)
         {
+            string filepath = string.Concat(_basePath, filename);
             var convertedJson = JsonConvert.SerializeObject(clients, Formatting.Indented);
-            string filepath = @"JsonFile/MockAccessKeyData.json";
             return Task.FromResult(Write(filepath, convertedJson));
             
         }
