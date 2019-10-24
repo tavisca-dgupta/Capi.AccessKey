@@ -34,7 +34,7 @@ namespace Tavisca.CAPI.AccessKey.Web.Controllers
         {
             var result = await _accessKeyService.ActivateKey(accessKey);
             if (result == null)
-                return NotFound();
+                return BadRequest();
             return Ok(result);
         }
         [HttpPut]
