@@ -1,17 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Builder;
+﻿using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Logging;
-using Microsoft.Extensions.Options;
 using Tavisca.CAPI.AccessKey.Core.Components;
 using Tavisca.CAPI.AccessKey.MockProvider.DatabaseProvider;
+using Tavisca.CAPI.AccessKey.MockProvider.ParameterStoreProvider;
 using Tavisca.CAPI.AccessKey.Model.Interfaces;
 using Tavisca.CAPI.AccessKey.Services.Services;
 
@@ -33,6 +27,7 @@ namespace Tavisca.CAPI.AccessKey.Web
             services.AddSingleton<IDatabaseAdapter, MockAccessKeyDatabase>();
             services.AddSingleton<ICreateKey, CreateKeyComponent>();
             services.AddSingleton<IDeactivateKey, DeactivateKeyComponents>();
+            services.AddSingleton<IParameterStore, MockParameterStore>();
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
         }
 
