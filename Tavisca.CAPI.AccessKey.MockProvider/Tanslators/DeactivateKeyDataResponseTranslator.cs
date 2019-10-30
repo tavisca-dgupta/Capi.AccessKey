@@ -21,7 +21,7 @@ namespace Tavisca.CAPI.AccessKey.MockProvider.Tanslators
                 AccessKey = client.AccessKey,
                 IskeyActive = client.IskeyActive,
                 Program = client.Program,
-                ProgramGroup = client.Program,
+                ProgramGroup = client.ProgramGroup,
                 UpdatedBy = client.UpdatedBy
 
             };

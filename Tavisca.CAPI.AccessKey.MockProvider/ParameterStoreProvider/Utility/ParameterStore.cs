@@ -49,4 +49,3 @@ namespace Tavisca.CAPI.AccessKey.MockProvider.ParameterStoreProvider.Utility
         }
     }
 }
-}
