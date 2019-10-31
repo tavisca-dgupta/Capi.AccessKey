@@ -6,6 +6,36 @@
 
   <ItemGroup>
     <Folder Include="Common\" />
+    <Folder Include="Properties\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Tavisca.CAPI.AccessKey1\platform-common\Tavisca.Platform.Common.Models\Tavisca.Platform.Common.Models.Core.csproj" />
+    <ProjectReference Include="..\..\Tavisca.CAPI.AccessKey1\platform-common\Tavisca.Platform.Common\Tavisca.Platform.Common.Core.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Models\Errors\ErrorCodes.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>ErrorCodes.resx</DependentUpon>
+    </Compile>
+    <Compile Update="Models\Errors\ErrorMessages.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>ErrorMessages.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Models\Errors\ErrorCodes.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>ErrorCodes.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Models\Errors\ErrorMessages.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>ErrorMessages.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
   </ItemGroup>
 
 </Project>
