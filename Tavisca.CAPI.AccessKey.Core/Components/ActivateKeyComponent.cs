@@ -7,19 +7,19 @@ using Tavisca.CAPI.AccessKey.Model.Models;
 
 namespace Tavisca.CAPI.AccessKey.Core.Components
 {
-    public class DeactivateKeyComponents: IDeactivateKey
+    public class ActivateKeyComponent : IActivateKey
     {
         private IDatabaseAdapter _databaseAdapter;
-        public DeactivateKeyComponents(IDatabaseAdapter databaseAdapter)
+        public ActivateKeyComponent(IDatabaseAdapter databaseAdapter)
         {
             _databaseAdapter = databaseAdapter;
         }
-        public async Task<AccessKeyModel> DeactivateKey(AccessKeyModel accessKey)
+        public async Task<AccessKeyModel> Activate(AccessKeyModel accessKey)
         {
             var clientKey = await _databaseAdapter.GetClientById(accessKey.ClientId);
-            if(clientKey.IskeyActive)
+            if (clientKey.IskeyActive == false)
             {
-                return await _databaseAdapter.DeactivateKey(accessKey);
+                return await _databaseAdapter.ActivateKey(accessKey);
             }
             return null;//what to send if key is already activated
         }

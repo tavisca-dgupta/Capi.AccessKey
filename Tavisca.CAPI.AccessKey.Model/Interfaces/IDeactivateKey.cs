@@ -8,6 +8,6 @@ namespace Tavisca.CAPI.AccessKey.Model.Interfaces
 {
     public interface IDeactivateKey
     {
-        Task<AccessKeyModel> DeactivateKey(AccessKeyModel accessKey);
+        Task<AccessKeyModel> Deactivate(AccessKeyModel accessKey);
     }
 }
