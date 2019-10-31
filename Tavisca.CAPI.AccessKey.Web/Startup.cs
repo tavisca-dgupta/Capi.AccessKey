@@ -26,7 +26,7 @@ namespace Tavisca.CAPI.AccessKey.Web
             services.AddSingleton<IAccessKeyService, AccessKeyService>();
             services.AddSingleton<IDatabaseAdapter, MockAccessKeyDatabase>();
             services.AddSingleton<ICreateKey, CreateKeyComponent>();
-            services.AddSingleton<IDeactivateKey, DeactivateKeyComponents>();
+            services.AddSingleton<IDeactivateKey, DeactivateKeyComponent>();
             services.AddSingleton<IParameterStore, MockParameterStore>();
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
         }

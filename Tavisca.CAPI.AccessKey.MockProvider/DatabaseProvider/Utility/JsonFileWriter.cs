@@ -17,7 +17,7 @@ namespace Tavisca.CAPI.AccessKey.MockProvider.DatabaseProvider.Utility
 
         public static Task<bool> WriteToJsonFile(List<GetAllKeysDataResponse> clients)
         {
-            string filepath = @"C:\Users\sjana\Desktop\Area52\Tavisca.AccessKey\Tavisca.CAPI.AccessKey.MockProvider\DatabaseProvider\JsonFile\MockAccessKeyData.json";
+            string filepath = "C:/Tavisca.CAPI.AccessKey/Tavisca.CAPI.AccessKey.MockProvider/DatabaseProvider/JsonFile/MockAccessKeyData.json";
             //using (var filepath = typeof(JsonFileWriter).Assembly.GetManifestResourceStream(string.Concat(_basePath, _filename)))
             //{
             //    var convertedJson = JsonConvert.SerializeObject(clients, Formatting.Indented);

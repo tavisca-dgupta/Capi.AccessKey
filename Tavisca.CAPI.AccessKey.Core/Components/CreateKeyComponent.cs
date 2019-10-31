@@ -28,7 +28,7 @@ namespace Tavisca.CAPI.AccessKey.Core.Components
             {
                 accessKey.AccessKey = GenerateAccessKey();
                 accessKey.IskeyActive = false;
-               return await _databaseAdapter.CreateKey(accessKey);
+                return await _databaseAdapter.CreateKey(accessKey);
             }
             return null;
         }

@@ -15,7 +15,6 @@ namespace Tavisca.CAPI.AccessKey.UnitTest.CoreComponentsTests
         private readonly IDatabaseAdapter _databaseAdapter;
         private AccessKeyModel accessKey = new AccessKeyModel()
         {
-            ClientId = "381ddhad",
             ClientName = "Citi",
             ProgramGroup = "south America",
             Program = "Prog50",
@@ -27,16 +26,33 @@ namespace Tavisca.CAPI.AccessKey.UnitTest.CoreComponentsTests
             _databaseAdapter = new MockAccessKeyDatabase();
         }
         [Fact]
-        public async void Client_Access_Key_Exists_Should_Return_Null()
+        public async void Create_method_returns_null_if_client_access_key_exists()
         {
-            string clientId = "1edb9skbh8g";
+            accessKey.ClientId = "381ddhad";
             var sut = new CreateKeyComponent(_databaseAdapter);
             var result = await sut.Create(accessKey);
 
             Assert.Null(result);
         }
 
-        //[Fact]
-        //public async void 
+        [Fact]
+        public async void Create_method_adds_IsKeyActive_field_if_client_key_doesnt_exist()
+        {
+            accessKey.ClientId = "newclient1";
+            var sut = new CreateKeyComponent(_databaseAdapter);
+            var result = await sut.Create(accessKey);
+
+            Assert.False(result.IskeyActive);
+        }
+
+        [Fact]
+        public async void Create_method_returns_AccessKeyModel_object_on_new_accesskey_creation()
+        {
+            accessKey.ClientId = "newclient1";
+            var sut = new CreateKeyComponent(_databaseAdapter);
+            var result = await sut.Create(accessKey);
+
+            Assert.IsType<AccessKeyModel>(result);
+        }
     }
 }

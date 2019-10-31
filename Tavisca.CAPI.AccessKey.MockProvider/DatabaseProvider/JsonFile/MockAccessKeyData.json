@@ -5,7 +5,7 @@
     "ProgramGroup": "Asia pacific",
     "Program": "neo card",
     "AccessKey": "ad9ff893-bba2-44be-b961-63ceccab24a8",
-    "IskeyActive": true,
+    "IskeyActive": false,
     "CreateDate": "12/07/2016",
     "UpdateDate": "01/03/2018",
     "UpdatedBy": "Anil kadam"
@@ -27,7 +27,7 @@
     "ProgramGroup": "Asia pacific",
     "Program": "Diwali discount",
     "AccessKey": "9bd3aa69-e9f8-48b5-848f-fb6883159df2",
-    "IskeyActive": true,
+    "IskeyActive": false,
     "CreateDate": "10/07/2016",
     "UpdateDate": "01/03/2018",
     "UpdatedBy": "Anil kadam"
@@ -60,7 +60,7 @@
     "ProgramGroup": "south America",
     "Program": "Prog50",
     "AccessKey": "68a0ece4-44e9-495b-92bb-42ca7fc01522",
-    "IskeyActive": false,
+    "IskeyActive": true,
     "CreateDate": null,
     "UpdateDate": "25-10-2019",
     "UpdatedBy": "ankit malhotra"
