@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using Tavisca.CAPI.AccessKey.Core.Components;
+﻿using Tavisca.CAPI.AccessKey.Core.Components;
 using Tavisca.CAPI.AccessKey.MockProvider.DatabaseProvider;
 using Tavisca.CAPI.AccessKey.Model.Interfaces;
 using Tavisca.CAPI.AccessKey.Model.Models;
@@ -31,7 +28,6 @@ namespace Tavisca.CAPI.AccessKey.UnitTest.CoreComponentsTests
             accessKey.ClientId = "2mpyt1qq9ds";
             var sut = new ActivateKeyComponent(_databaseAdapter);
             var result = await sut.Activate(accessKey);
-
             Assert.Null(result);
         }
 
@@ -41,7 +37,6 @@ namespace Tavisca.CAPI.AccessKey.UnitTest.CoreComponentsTests
             accessKey.ClientId = "1gkrcs8g740";
             var sut = new ActivateKeyComponent(_databaseAdapter);
             var result = await sut.Activate(accessKey);
-
             Assert.IsType<AccessKeyModel>(result);
         }
     }

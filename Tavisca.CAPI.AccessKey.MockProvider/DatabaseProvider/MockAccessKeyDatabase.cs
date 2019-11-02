@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Text;
 using System.Threading.Tasks;
 using Tavisca.CAPI.AccessKey.MockProvider.DatabaseProvider.Utility;
 using Tavisca.CAPI.AccessKey.MockProvider.Tanslator;
@@ -8,6 +7,7 @@ using Tavisca.CAPI.AccessKey.MockProvider.Tanslators;
 using Tavisca.CAPI.AccessKey.Model.Interfaces;
 using Tavisca.CAPI.AccessKey.Model.Models;
 using Tavisca.CAPI.AccessKey.Model.Models.DataApiModel;
+using Tavisca.CAPI.AccessKey.Model.Models.Errors;
 
 namespace Tavisca.CAPI.AccessKey.MockProvider.DatabaseProvider
 {
@@ -21,8 +21,8 @@ namespace Tavisca.CAPI.AccessKey.MockProvider.DatabaseProvider
             List<AccessKeyModel> accessKeys = new List<AccessKeyModel>();
             for(int i=0;i<_clients.Count;i++)
             {
-                if (GetAllKeysDataResponseTranslator.ToAccessKeyModel(_clients[i]) != null)
-                    accessKeys.Add(GetAllKeysDataResponseTranslator.ToAccessKeyModel(_clients[i]));
+                if (_clients[i].ToAccessKeyModel() != null)
+                    accessKeys.Add(_clients[i].ToAccessKeyModel());
             }
             return accessKeys;
         }
@@ -35,7 +35,7 @@ namespace Tavisca.CAPI.AccessKey.MockProvider.DatabaseProvider
                  if (clients[i].ClientId.Equals(clientId))
                      return clients[i];
              }
-             return null;//todo write a custom exception
+            throw ClientSide.ClientNotFound();
          }
       
          public async Task<AccessKeyModel> DeactivateKey(AccessKeyModel client)
@@ -46,6 +46,8 @@ namespace Tavisca.CAPI.AccessKey.MockProvider.DatabaseProvider
                 if (clients[i].ClientId == client.ClientId)
                 {
                     clients[i].IskeyActive = false;
+                    clients[i].UpdateDate = DateTime.Today.ToString("dd-MM-yyyy");
+                    clients[i].UpdatedBy = client.UpdatedBy;
                     break;
                 }
             }
@@ -54,7 +56,7 @@ namespace Tavisca.CAPI.AccessKey.MockProvider.DatabaseProvider
             {
                 return await GetClientById(client.ClientId);
             }
-            return null;//write custom exception
+            throw ServerSide.AccessKeyNotDeactivated();
          }
 
         public async Task<bool> IsKeyPresent(string clientId)
@@ -72,12 +74,14 @@ namespace Tavisca.CAPI.AccessKey.MockProvider.DatabaseProvider
         {
             var clients = await JsonFileReader.ReadAllJsonObject(_filename);
             GetAllKeysDataResponse accessKey = key.ToGetAllKeysResponseModel();
-            accessKey.UpdateDate = System.DateTime.Today.ToString("dd-MM-yyyy");
+            accessKey.CreateDate = DateTime.Today.ToString("dd-MM-yyyy");
+            accessKey.UpdateDate = DateTime.Today.ToString("dd-MM-yyyy");
             clients.Add(accessKey);
             var createStatus = await JsonFileWriter.WriteToJsonFile(clients);
             if (createStatus)
                 return key;
-            return null;
+            throw ServerSide.AccessKeyNotGenerated();
+            
         }
         public async Task<AccessKeyModel> ActivateKey(AccessKeyModel client)
         {
@@ -87,6 +91,8 @@ namespace Tavisca.CAPI.AccessKey.MockProvider.DatabaseProvider
                 if (clients[i].ClientId == client.ClientId)
                 {
                     clients[i].IskeyActive = true;
+                    clients[i].UpdateDate = DateTime.Today.ToString("dd-MM-yyyy");
+                    clients[i].UpdatedBy = client.UpdatedBy;
                     break;
                 }
             }
@@ -95,7 +101,7 @@ namespace Tavisca.CAPI.AccessKey.MockProvider.DatabaseProvider
             {
                 return await GetClientById(client.ClientId);
             }
-            return null;    //TODO: write custom exception
+            throw ServerSide.AccesskeyNotActivated();
         }
     }
 }

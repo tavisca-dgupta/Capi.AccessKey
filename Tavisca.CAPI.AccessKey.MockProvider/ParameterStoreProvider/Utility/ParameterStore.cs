@@ -1,10 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Text;
 using Newtonsoft.Json;
-using Newtonsoft.Json.Linq;
 using System.IO;
-using System.Reflection;
 using Tavisca.CAPI.AccessKey.Model.Models;
 using System.Threading.Tasks;
 
@@ -23,9 +20,8 @@ namespace Tavisca.CAPI.AccessKey.MockProvider.ParameterStoreProvider.Utility
                 File.WriteAllText(_parameterStorePath, newParameterStore);
                 return Task.FromResult(true);
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                Console.WriteLine("Add Error : " + ex.Message.ToString());
                 return Task.FromResult(false);
             }
 
@@ -41,9 +37,8 @@ namespace Tavisca.CAPI.AccessKey.MockProvider.ParameterStoreProvider.Utility
                 File.WriteAllText(_parameterStorePath, newParameterStore);
                 return Task.FromResult(true);
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                Console.WriteLine("Add Error : " + ex.Message.ToString());
                 return Task.FromResult(false);
             }
         }

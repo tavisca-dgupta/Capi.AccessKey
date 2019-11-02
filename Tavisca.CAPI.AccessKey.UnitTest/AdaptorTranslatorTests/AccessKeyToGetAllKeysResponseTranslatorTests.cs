@@ -1,5 +1,4 @@
-﻿using System;
-using Tavisca.CAPI.AccessKey.MockProvider.Tanslators;
+﻿using Tavisca.CAPI.AccessKey.MockProvider.Tanslators;
 using Tavisca.CAPI.AccessKey.Model.Models;
 using Tavisca.CAPI.AccessKey.Model.Models.DataApiModel;
 using Xunit;

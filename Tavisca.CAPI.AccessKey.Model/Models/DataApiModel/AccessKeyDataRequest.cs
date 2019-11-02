@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace Tavisca.CAPI.AccessKey.Model.Models.DataApiModel
+﻿namespace Tavisca.CAPI.AccessKey.Model.Models.DataApiModel
 {
     public class AccessKeyDataRequest
     {

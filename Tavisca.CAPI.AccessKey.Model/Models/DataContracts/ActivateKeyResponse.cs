@@ -2,6 +2,7 @@
 {
     public class ActivateKeyResponse
     {
+        public string ClientId { get; set; }
         public string ClientName { get; set; }
         public string AccessKey { get; set; }
         public bool IskeyActive { get; set; }

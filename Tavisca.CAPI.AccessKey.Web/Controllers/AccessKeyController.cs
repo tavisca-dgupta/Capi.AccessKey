@@ -18,43 +18,35 @@ namespace Tavisca.CAPI.AccessKey.Web.Controllers
         {
             _accessKeyService = accessKeyService;
         }
-        // GET accesskey/getall
+
         [HttpGet]
-        [Route("getallkeys")]
+        [Route("getall")]
         public async Task<ActionResult<List<GetAllKeysResponse>>> Get()
         {
             var result = await _accessKeyService.GetAllKeys();
-            if (result == null)
-                return NotFound();
-            return Ok(result);
+            return result == null ? (ActionResult<List<GetAllKeysResponse>>)NotFound() : (ActionResult<List<GetAllKeysResponse>>)Ok(result);
         }
 
         [HttpPost]
-        [Route("create")]
-        public async Task<ActionResult<AccessKeyResponse>> Post([FromBody] AccessKeyRequest key)
+        [Route("generatenew")]
+        public async Task<ActionResult<AccessKeyResponse>> Create([FromBody] AccessKeyRequest key)
         {
             var result = await _accessKeyService.CreateKey(key);
-            if (result == null)
-                return BadRequest();
-            return Ok(result);
+            return result == null ? (ActionResult<AccessKeyResponse>)BadRequest() : (ActionResult<AccessKeyResponse>)Ok(result);
         }
         [HttpPut]
         [Route("activate/{clientId}")]
         public async Task<ActionResult<ActivateKeyResponse>> Activate(string clientId, [FromBody] ActivateKeyRequest accessKey)
         {
             var result = await _accessKeyService.ActivateKey(accessKey);
-            if (result == null)
-                return BadRequest();
-            return Ok(result);
+            return result == null ? (ActionResult<ActivateKeyResponse>)BadRequest() : (ActionResult<ActivateKeyResponse>)Ok(result);
         }
         [HttpPut]
         [Route("deactivate/{clientId}")]
-        public async Task<ActionResult<DeactivateKeyResponse>> Put(string clientId,[FromBody] DeactivateKeyRequest keyRequest)
+        public async Task<ActionResult<DeactivateKeyResponse>> Deactivate(string clientId,[FromBody] DeactivateKeyRequest keyRequest)
         {
             var result = await _accessKeyService.DeactivateKey(keyRequest);
-            if (result == null)
-                return BadRequest();
-            return Ok(result);
+            return result == null ? (ActionResult<DeactivateKeyResponse>)BadRequest() : (ActionResult<DeactivateKeyResponse>)Ok(result);
         }
     }
 }

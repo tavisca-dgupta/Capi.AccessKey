@@ -1,9 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 using System.Threading.Tasks;
 using Tavisca.CAPI.AccessKey.Model.Interfaces;
 using Tavisca.CAPI.AccessKey.Model.Models;
+using Tavisca.CAPI.AccessKey.Model.Models.Errors;
 
 namespace Tavisca.CAPI.AccessKey.Core.Components
 {
@@ -16,7 +15,7 @@ namespace Tavisca.CAPI.AccessKey.Core.Components
             _databaseAdapter = databaseAdapter;
         }
 
-        public string GenerateAccessKey()
+        private string GenerateAccessKey()
         {
             Guid accessKey = Guid.NewGuid();
             return accessKey.ToString();
@@ -30,7 +29,7 @@ namespace Tavisca.CAPI.AccessKey.Core.Components
                 accessKey.IskeyActive = false;
                 return await _databaseAdapter.CreateKey(accessKey);
             }
-            return null;
+            throw ClientSide.KeyAlreadyExists();
         }
     }
 }

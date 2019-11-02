@@ -8,6 +8,7 @@ using Tavisca.CAPI.AccessKey.MockProvider.DatabaseProvider;
 using Tavisca.CAPI.AccessKey.MockProvider.ParameterStoreProvider;
 using Tavisca.CAPI.AccessKey.Model.Interfaces;
 using Tavisca.CAPI.AccessKey.Services.Services;
+using Tavisca.CAPI.AccessKey.Web.Middleware.Extenstions;
 
 namespace Tavisca.CAPI.AccessKey.Web
 {
@@ -23,10 +24,12 @@ namespace Tavisca.CAPI.AccessKey.Web
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddSingleton<IAccessKeyService, AccessKeyService>();
+            services.AddTransient<IAccessKeyService, AccessKeyService>();
             services.AddSingleton<IDatabaseAdapter, MockAccessKeyDatabase>();
-            services.AddSingleton<ICreateKey, CreateKeyComponent>();
-            services.AddSingleton<IDeactivateKey, DeactivateKeyComponent>();
+            services.AddTransient<ICreateKey, CreateKeyComponent>();
+            services.AddTransient<IDeactivateKey, DeactivateKeyComponent>();
+            services.AddTransient<IActivateKey, ActivateKeyComponent>();
+            services.AddTransient<IAccessKeyComponent, AccessKeyComponent>();
             services.AddSingleton<IParameterStore, MockParameterStore>();
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
         }
@@ -45,6 +48,9 @@ namespace Tavisca.CAPI.AccessKey.Web
             }
 
             app.UseHttpsRedirection();
+            app.UseRewindContextStreamMiddleware();
+            app.UseCustomExceptionHandler();
+            app.UseLogging();
             app.UseMvc();
         }
     }

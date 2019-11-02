@@ -14,26 +14,16 @@ namespace Tavisca.CAPI.AccessKey.MockProvider.ParameterStoreProvider
         public async Task<bool> AddAccessKey(ParameterStoreModel parameterStore)
         {
             if (parameterStore.AccessKey != null && parameterStore.ClientId != null)
-            {
                 return await ParameterStore.AddKey(parameterStore);
-            }
             else
-            {
-                Console.WriteLine("Field empty");
                 return false;
-            }
         }
         public async Task<bool> DeleteAccessKey(string accessKey)
         {
             if (accessKey != null)
-            {
                 return await ParameterStore.DeleteKey(accessKey);
-            }
             else
-            {
-                Console.WriteLine("Access Key cannot be empty");
                 return false;
-            }
         }
     }
 }

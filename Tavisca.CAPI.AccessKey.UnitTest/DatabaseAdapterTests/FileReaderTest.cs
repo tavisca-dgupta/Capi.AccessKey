@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using Tavisca.CAPI.AccessKey.MockProvider.DatabaseProvider.Utility;
-using Tavisca.CAPI.AccessKey.Model.Models;
+﻿using Tavisca.CAPI.AccessKey.MockProvider.DatabaseProvider.Utility;
 using Xunit;
 
 namespace Tavisca.CAPI.AccessKey.UnitTest.DatabaseAdapterTests

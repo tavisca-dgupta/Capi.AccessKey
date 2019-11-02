@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using Tavisca.CAPI.AccessKey.Model.Models;
+﻿using Tavisca.CAPI.AccessKey.Model.Models;
 using Tavisca.CAPI.AccessKey.Model.Models.DataContracts;
 
 namespace Tavisca.CAPI.AccessKey.Services.Tanslator
@@ -10,10 +7,11 @@ namespace Tavisca.CAPI.AccessKey.Services.Tanslator
     {
         public static GetAllKeysResponse ToAccesKeyDetail(this AccessKeyModel key)
         {
-            if (key == null)
-                return null;
-            return new GetAllKeysResponse()
+            return key == null
+                ? null
+                : new GetAllKeysResponse()
             {
+                ClientId = key.ClientId,
                 AccessKey = key.AccessKey,
                 ClientName = key.ClientName,
                 IskeyActive = key.IskeyActive,

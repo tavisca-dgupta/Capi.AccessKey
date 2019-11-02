@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using Tavisca.CAPI.AccessKey.Model.Models;
+﻿using Tavisca.CAPI.AccessKey.Model.Models;
 using Tavisca.CAPI.AccessKey.Model.Models.DataApiModel;
 
 namespace Tavisca.CAPI.AccessKey.MockProvider.Tanslator
@@ -10,9 +7,9 @@ namespace Tavisca.CAPI.AccessKey.MockProvider.Tanslator
     {
         public static AccessKeyModel ToAccessKeyModel(this GetAllKeysDataResponse client)
         {
-            if (client == null)
-                return null;
-            return new AccessKeyModel()
+            return client == null
+                ? null
+                : new AccessKeyModel()
             {
                 ClientId = client.ClientId,
                 ProgramGroup = client.ProgramGroup,
