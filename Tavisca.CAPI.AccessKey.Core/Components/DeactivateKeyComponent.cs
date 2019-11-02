@@ -4,6 +4,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Tavisca.CAPI.AccessKey.Model.Interfaces;
 using Tavisca.CAPI.AccessKey.Model.Models;
+using Tavisca.CAPI.AccessKey.Model.Models.Errors;
 
 namespace Tavisca.CAPI.AccessKey.Core.Components
 {
@@ -21,7 +22,7 @@ namespace Tavisca.CAPI.AccessKey.Core.Components
             {
                 return await _databaseAdapter.DeactivateKey(accessKey);
             }
-            return null;//what to send if key is already activated
+            throw ClientSide.KeyIsAlreadyDeactivated();
         }
     }
 }
