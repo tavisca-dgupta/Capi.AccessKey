@@ -17,5 +17,10 @@ namespace Tavisca.CAPI.AccessKey.Model.Models.Errors
         {
             return new CustomException(ErrorCodes.AccessKeyNotDeactivated, ErrorMessages.AccessKeyNotDeactivated, HttpStatusCode.InternalServerError);
         }
+        public static BaseApplicationException ParameterStoreNotResponding()
+        {
+            return new CustomException(ErrorCodes.ParameterStoreNotResponding, ErrorMessages.ParameterStoreNotResponding, HttpStatusCode.InternalServerError);
+        }
+        
     }
 }

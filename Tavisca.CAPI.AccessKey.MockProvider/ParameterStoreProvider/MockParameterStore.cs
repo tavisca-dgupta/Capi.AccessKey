@@ -11,8 +11,13 @@ namespace Tavisca.CAPI.AccessKey.MockProvider.ParameterStoreProvider
 {
     public class MockParameterStore : IParameterStore
     {
-        public async Task<bool> AddAccessKey(ParameterStoreModel parameterStore)
+        public async Task<bool> AddAccessKey(string accessKey,string clientId)
         {
+            var parameterStore = new ParameterStoreModel
+            {
+                AccessKey = accessKey,
+                ClientId =clientId
+            };
             if (parameterStore.AccessKey != null && parameterStore.ClientId != null)
                 return await ParameterStore.AddKey(parameterStore);
             else

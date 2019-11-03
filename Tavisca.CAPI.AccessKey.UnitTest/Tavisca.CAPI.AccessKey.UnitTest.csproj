@@ -8,6 +8,7 @@
 
   <ItemGroup>
     <PackageReference Include="FluentAssertions" Version="5.9.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc" Version="2.2.0" />
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.0.1" />
     <PackageReference Include="Moq" Version="4.13.1" />
     <PackageReference Include="Newtonsoft.Json" Version="12.0.2" />
@@ -20,6 +21,7 @@
     <ProjectReference Include="..\Tavisca.CAPI.AccessKey.MockProvider\Tavisca.CAPI.AccessKey.MockProvider.csproj" />
     <ProjectReference Include="..\Tavisca.CAPI.AccessKey.Model\Tavisca.CAPI.AccessKey.Model.csproj" />
     <ProjectReference Include="..\Tavisca.CAPI.AccessKey.Services\Tavisca.CAPI.AccessKey.Services.csproj" />
+    <ProjectReference Include="..\Tavisca.CAPI.AccessKey.Web\Tavisca.CAPI.AccessKey.Web.csproj" />
   </ItemGroup>
 
 </Project>

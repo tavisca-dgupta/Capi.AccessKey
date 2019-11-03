@@ -8,16 +8,21 @@ namespace Tavisca.CAPI.AccessKey.Core.Components
     public class DeactivateKeyComponent: IDeactivateKey
     {
         private IDatabaseAdapter _databaseAdapter;
-        public DeactivateKeyComponent(IDatabaseAdapter databaseAdapter)
+        private IParameterStore _parameterStore;
+        public DeactivateKeyComponent(IDatabaseAdapter databaseAdapter,IParameterStore parameterStore)
         {
             _databaseAdapter = databaseAdapter;
+            _parameterStore = parameterStore;
         }
-        public async Task<AccessKeyModel> Deactivate(AccessKeyModel accessKey)
+        public async Task<AccessKeyModel> Deactivate(AccessKeyModel keyModel)
         {
-            var clientKey = await _databaseAdapter.GetClientById(accessKey.ClientId);
+            var clientKey = await _databaseAdapter.GetClientById(keyModel.ClientId);
             if(clientKey.IskeyActive)
             {
-                return await _databaseAdapter.DeactivateKey(accessKey);
+                if (await _parameterStore.DeleteAccessKey(keyModel.AccessKey))
+                    return await _databaseAdapter.DeactivateKey(keyModel);
+                else
+                    throw ServerSide.ParameterStoreNotResponding();
             }
             throw ClientSide.KeyIsAlreadyDeactivated();
         }

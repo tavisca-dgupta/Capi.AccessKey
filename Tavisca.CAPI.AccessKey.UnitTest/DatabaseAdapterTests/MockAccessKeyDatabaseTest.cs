@@ -27,7 +27,7 @@ namespace Tavisca.CAPI.AccessKey.UnitTest.DatabaseAdapterTests
         }
 
         [Fact]
-        public async Task Deactivate_a_Key()
+        public async Task Deactivate_a_key()
         {
             IDatabaseAdapter database = new MockAccessKeyDatabase();
             AccessKeyModel accessKey = new AccessKeyModel();
@@ -40,7 +40,7 @@ namespace Tavisca.CAPI.AccessKey.UnitTest.DatabaseAdapterTests
             Assert.False(client.IskeyActive);
         }
         [Fact]
-        public async Task Activate_a_Key()
+        public async Task Activate_a_key()
         {
             IDatabaseAdapter database = new MockAccessKeyDatabase();
             AccessKeyModel accessKey = new AccessKeyModel();
@@ -54,7 +54,7 @@ namespace Tavisca.CAPI.AccessKey.UnitTest.DatabaseAdapterTests
         }
 
         [Fact]
-        public async Task Get_a_Client_By_Id()
+        public async Task Get_a_client_by_id()
         {
             IDatabaseAdapter database = new MockAccessKeyDatabase();
             AccessKeyModel accessKey = new AccessKeyModel();
@@ -67,7 +67,7 @@ namespace Tavisca.CAPI.AccessKey.UnitTest.DatabaseAdapterTests
             Assert.Equal("ad9ff893-bba2-44be-b961-63ceccab24a8", client.AccessKey);
         }
         [Fact]
-        public async Task Get_a_Client_By_Id_If_Client_Not_Present()
+        public async Task Get_a_client_by_id_if_client_not_present()
         {
             IDatabaseAdapter database = new MockAccessKeyDatabase();
             var client = await database.GetClientById("abcdde678rbjzbc8e");

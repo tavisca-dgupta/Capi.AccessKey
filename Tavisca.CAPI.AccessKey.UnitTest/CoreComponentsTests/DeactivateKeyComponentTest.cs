@@ -1,5 +1,6 @@
 ﻿using Tavisca.CAPI.AccessKey.Core.Components;
 using Tavisca.CAPI.AccessKey.MockProvider.DatabaseProvider;
+using Tavisca.CAPI.AccessKey.MockProvider.ParameterStoreProvider;
 using Tavisca.CAPI.AccessKey.Model.Interfaces;
 using Tavisca.CAPI.AccessKey.Model.Models;
 using Xunit;
@@ -9,6 +10,7 @@ namespace Tavisca.CAPI.AccessKey.UnitTest.CoreComponentsTests
     public class DeactivateKeyComponentTest
     {
         private readonly IDatabaseAdapter _databaseAdapter;
+        private readonly IParameterStore _parameterStore;
         private AccessKeyModel accessKey = new AccessKeyModel()
         {
             ClientName = "Citi",
@@ -20,13 +22,14 @@ namespace Tavisca.CAPI.AccessKey.UnitTest.CoreComponentsTests
         public DeactivateKeyComponentTest()
         {
             _databaseAdapter = new MockAccessKeyDatabase();
+            _parameterStore = new MockParameterStore();
         }
 
         [Fact]
         public async void Deactivate_method_returns_null_if_client_key_active()
         {
             accessKey.ClientId = "1gkrcs8g740";
-            var sut = new DeactivateKeyComponent(_databaseAdapter);
+            var sut = new DeactivateKeyComponent(_databaseAdapter,_parameterStore);
             var result = await sut.Deactivate(accessKey);
             Assert.Null(result);
         }
@@ -35,7 +38,7 @@ namespace Tavisca.CAPI.AccessKey.UnitTest.CoreComponentsTests
         public async void Activate_method_returns_AccessKeyModel_if_client_key_inactive()
         {
             accessKey.ClientId = "1edb9skbh8g";
-            var sut = new DeactivateKeyComponent(_databaseAdapter);
+            var sut = new DeactivateKeyComponent(_databaseAdapter,_parameterStore);
             var result = await sut.Deactivate(accessKey);
             Assert.IsType<AccessKeyModel>(result);
         }

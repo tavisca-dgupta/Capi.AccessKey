@@ -5,11 +5,11 @@
     "ProgramGroup": "Asia pacific",
     "Program": "neo card",
     "AccessKey": "ad9ff893-bba2-44be-b961-63ceccab24a8",
-    "IskeyActive": false,
+    "IskeyActive": true,
     "CreateDate": "12/07/2016",
-    "UpdateDate": "02-11-2019",
-    "UpdatedBy": "Anil kadam"
-  },
+    "UpdateDate": "03-11-2019",
+    "UpdatedBy": "Dharna"
+  },  
   {
     "ClientId": "1gkrcs8g740",
     "ClientName": "Cx Loyalty",
@@ -18,7 +18,7 @@
     "AccessKey": "f6640278-453b-4c11-9302-9d189279bb23",
     "IskeyActive": false,
     "CreateDate": "07/07/2016",
-    "UpdateDate": "02-11-2019",
+    "UpdateDate": "03-11-2019",
     "UpdatedBy": "Dharna"
   },
   {
@@ -33,7 +33,7 @@
     "UpdatedBy": "Anil kadam"
   },
   {
-    "ClientId": "2mpyt1qq9ds",
+    "ClientId": "2mpyt1qq9dsxdcf",
     "ClientName": "Capital one",
     "ProgramGroup": "Asia pacific",
     "Program": "Diwali discount",
@@ -44,7 +44,7 @@
     "UpdatedBy": "Anil kadam"
   },
   {
-    "ClientId": "2mpyt1qq9ds",
+    "ClientId": "2mpyt1qq9dsgvrv",
     "ClientName": "Amex",
     "ProgramGroup": "Asia pacific",
     "Program": "Diwali discount",
@@ -53,16 +53,5 @@
     "CreateDate": "10/07/2016",
     "UpdateDate": "01/03/2018",
     "UpdatedBy": "Anil kadam"
-  },
-  {
-    "ClientId": "381ddhad",
-    "ClientName": "Citi",
-    "ProgramGroup": "south America",
-    "Program": "Prog50",
-    "AccessKey": "68a0ece4-44e9-495b-92bb-42ca7fc01522",
-    "IskeyActive": true,
-    "CreateDate": null,
-    "UpdateDate": "25-10-2019",
-    "UpdatedBy": "ankit malhotra"
   }
 ]
