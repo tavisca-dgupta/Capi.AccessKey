@@ -138,4 +138,7 @@
   <data name="KeyIsAlreadyDeactivated" xml:space="preserve">
     <value>43</value>
   </data>
+  <data name="ParameterStoreNotResponding" xml:space="preserve">
+    <value>54</value>
+  </data>
 </root>

@@ -1,5 +1,6 @@
 ﻿using Tavisca.CAPI.AccessKey.Core.Components;
 using Tavisca.CAPI.AccessKey.MockProvider.DatabaseProvider;
+using Tavisca.CAPI.AccessKey.MockProvider.ParameterStoreProvider;
 using Tavisca.CAPI.AccessKey.Model.Interfaces;
 using Tavisca.CAPI.AccessKey.Model.Models;
 using Xunit;
@@ -9,6 +10,7 @@ namespace Tavisca.CAPI.AccessKey.UnitTest.CoreComponentsTests
     public class CreateKeyComponentTest
     {
         private readonly IDatabaseAdapter _databaseAdapter;
+
         private AccessKeyModel accessKey = new AccessKeyModel()
         {
             ClientName = "Citi",

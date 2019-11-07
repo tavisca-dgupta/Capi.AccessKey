@@ -122,5 +122,14 @@ namespace Tavisca.CAPI.AccessKey.Model.Models.Errors {
                 return ResourceManager.GetString("KeyIsAlreadyDeactivated", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Parameter store is not responding.
+        /// </summary>
+        internal static string ParameterStoreNotResponding {
+            get {
+                return ResourceManager.GetString("ParameterStoreNotResponding", resourceCulture);
+            }
+        }
     }
 }
