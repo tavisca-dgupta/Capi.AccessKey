@@ -12,6 +12,8 @@ namespace Tavisca.CAPI.AccessKey.Services.Tanslator
                 : new GetAllKeysResponse()
             {
                 ClientId = key.ClientId,
+                ProgramGroup = key.ProgramGroup,
+                Program = key.Program,
                 AccessKey = key.AccessKey,
                 ClientName = key.ClientName,
                 IskeyActive = key.IskeyActive,
