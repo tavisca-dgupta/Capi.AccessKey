@@ -1,6 +1,6 @@
 ﻿using Tavisca.CAPI.AccessKey.Core.Components;
 using Tavisca.CAPI.AccessKey.MockProvider.DatabaseProvider;
-using Tavisca.CAPI.AccessKey.MockProvider.ParameterStoreProvider;
+using Tavisca.CAPI.AccessKey.MockProvider.ParameterStore;
 using Tavisca.CAPI.AccessKey.Model.Interfaces;
 using Tavisca.CAPI.AccessKey.Model.Models;
 using Xunit;

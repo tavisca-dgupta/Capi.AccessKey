@@ -5,10 +5,11 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Tavisca.CAPI.AccessKey.Core.Components;
 using Tavisca.CAPI.AccessKey.MockProvider.DatabaseProvider;
-using Tavisca.CAPI.AccessKey.MockProvider.ParameterStoreProvider;
+using Tavisca.CAPI.AccessKey.MockProvider.ParameterStore;
 using Tavisca.CAPI.AccessKey.Model.Interfaces;
 using Tavisca.CAPI.AccessKey.Services.Services;
 using Tavisca.CAPI.AccessKey.Web.Middleware.Extenstions;
+using Tavisca.CAPI.AccessKey.MockProvider.ParameterStore.Utility;
 
 namespace Tavisca.CAPI.AccessKey.Web
 {
@@ -30,7 +31,8 @@ namespace Tavisca.CAPI.AccessKey.Web
             services.AddTransient<IDeactivateKey, DeactivateKeyComponent>();
             services.AddTransient<IActivateKey, ActivateKeyComponent>();
             services.AddTransient<IAccessKeyComponent, AccessKeyComponent>();
-            services.AddSingleton<IParameterStore, MockParameterStore>();
+            services.AddSingleton<IParameterStore, ParameterStore>();
+            services.AddSingleton<IParameterStoreProvider, ParameterStoreProvider>();
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
         }
 

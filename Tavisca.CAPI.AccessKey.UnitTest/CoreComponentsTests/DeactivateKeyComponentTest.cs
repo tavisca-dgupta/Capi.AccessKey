@@ -1,6 +1,6 @@
 ﻿using Tavisca.CAPI.AccessKey.Core.Components;
 using Tavisca.CAPI.AccessKey.MockProvider.DatabaseProvider;
-using Tavisca.CAPI.AccessKey.MockProvider.ParameterStoreProvider;
+using Tavisca.CAPI.AccessKey.MockProvider.ParameterStore;
 using Tavisca.CAPI.AccessKey.Model.Interfaces;
 using Tavisca.CAPI.AccessKey.Model.Models;
 using Xunit;
@@ -22,7 +22,7 @@ namespace Tavisca.CAPI.AccessKey.UnitTest.CoreComponentsTests
         public DeactivateKeyComponentTest()
         {
             _databaseAdapter = new MockAccessKeyDatabase();
-            _parameterStore = new MockParameterStore();
+            //_parameterStore = new ParameterStore();
         }
 
         [Fact]

@@ -12,7 +12,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\Tavisca.CAPI.AccessKey1\platform-common\Tavisca.Platform.Common.WebApi\Tavisca.Platform.Common.WebApi.Core.csproj" />
+    <ProjectReference Include="..\..\platform-common\Tavisca.Platform.Common.WebApi\Tavisca.Platform.Common.WebApi.Core.csproj" />
     <ProjectReference Include="..\Tavisca.CAPI.AccessKey.Core\Tavisca.CAPI.AccessKey.Core.csproj" />
     <ProjectReference Include="..\Tavisca.CAPI.AccessKey.Model\Tavisca.CAPI.AccessKey.Model.csproj" />
   </ItemGroup>
