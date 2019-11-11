@@ -14,7 +14,7 @@ namespace Tavisca.CAPI.AccessKey.Core.Translator
             return new ParameterStoreModel()
             {
                 Key = accessKeyModel.AccessKey,
-                Value = accessKeyModel.TenantId
+                Value = accessKeyModel.ClientTenantId
             };
         }
     }

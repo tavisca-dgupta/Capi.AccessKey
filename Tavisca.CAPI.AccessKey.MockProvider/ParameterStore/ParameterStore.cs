@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 using Tavisca.CAPI.AccessKey.Model.Interfaces;
 using Amazon.SimpleSystemsManagement.Model;
 using Tavisca.CAPI.AccessKey.MockProvider.Tanslators;
+using Tavisca.CAPI.AccessKey.Model.Models.Errors;
 
 namespace Tavisca.CAPI.AccessKey.MockProvider.ParameterStore
 {
@@ -19,48 +20,32 @@ namespace Tavisca.CAPI.AccessKey.MockProvider.ParameterStore
             _parameterStoreProvider = parameterStoreProvider;
         }
 
-
-
-        public Task<bool> AddKey(ParameterStoreModel keyValueModel)
+        public async Task<bool> AddKey(ParameterStoreModel keyValueModel)
         {
             var putParameterRequest = keyValueModel.ToPutParameterRequest();
             try
             {
-                var putParameterResponse = _parameterStoreProvider.PutParameter(putParameterRequest);
-                if (CheckPutParameterResponse(putParameterResponse))
-                    return Task.FromResult(true);
+                var putParameterResponse = await _parameterStoreProvider.PutParameter(putParameterRequest);
+                    return true;
             }
             catch
             {
+                throw ServerSide.ParameterStoreAdditionFailed();
             }
-            return Task.FromResult(false);
-        }
-        //Todo
-        private bool CheckPutParameterResponse(Task<PutParameterResponse> putParameterResponse)
-        {
-            throw new NotImplementedException();
         }
 
-
-
-        public Task<bool> DeleteKey(ParameterStoreModel keyValueModel)
+        public async Task<bool> DeleteKey(ParameterStoreModel keyValueModel)
         {
             var deleteParameterRequest = keyValueModel.ToDeleteParameterRequest();
             try
             {
-                var deleteParameterResponse = _parameterStoreProvider.DeleteParameter(deleteParameterRequest);
-                if (CheckDeleteParameterResponse(deleteParameterResponse))
-                    return Task.FromResult(true);
+                var deleteParameterResponse = await _parameterStoreProvider.DeleteParameter(deleteParameterRequest);
+                    return true;
             }
             catch
             {
+                throw ServerSide.ParameterStoreDeletionFailed();
             }
-            return Task.FromResult(false);
-        }
-        //Todo
-        private bool CheckDeleteParameterResponse(Task<DeleteParameterResponse> deleteParameterResponse)
-        {
-            throw new NotImplementedException();
         }
     }
 }

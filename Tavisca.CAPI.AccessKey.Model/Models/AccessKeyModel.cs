@@ -3,7 +3,7 @@
     public class AccessKeyModel
     {
         public string ClientId { get; set; }
-        public string TenantId { get; set; }
+        public string ClientTenantId { get; set; }
         public string ClientName { get; set; }
         public string ProgramGroup { get; set; }
         public string Program { get; set; }

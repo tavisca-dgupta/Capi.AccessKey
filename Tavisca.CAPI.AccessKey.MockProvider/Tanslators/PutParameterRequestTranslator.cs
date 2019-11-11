@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using Amazon.SimpleSystemsManagement;
 using Amazon.SimpleSystemsManagement.Model;
 using Tavisca.CAPI.AccessKey.Model.Models;
 namespace Tavisca.CAPI.AccessKey.MockProvider.Tanslators
@@ -11,11 +12,12 @@ namespace Tavisca.CAPI.AccessKey.MockProvider.Tanslators
         {
             if (parameterStoreModel == null)
                 return null;
-            //Todo
             return new PutParameterRequest()
             {
                 Name = parameterStoreModel.Key,
-                Value = parameterStoreModel.Value
+                Value = parameterStoreModel.Value,
+                Type = ParameterType.SecureString,
+                Overwrite = false
             };
         }
     }

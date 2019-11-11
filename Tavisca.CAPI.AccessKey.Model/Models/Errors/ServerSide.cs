@@ -1,4 +1,5 @@
-﻿using System.Net;
+﻿using System;
+using System.Net;
 using Tavisca.Platform.Common.Models;
 
 namespace Tavisca.CAPI.AccessKey.Model.Models.Errors
@@ -21,6 +22,20 @@ namespace Tavisca.CAPI.AccessKey.Model.Models.Errors
         {
             return new CustomException(ErrorCodes.ParameterStoreNotResponding, ErrorMessages.ParameterStoreNotResponding, HttpStatusCode.InternalServerError);
         }
-        
+
+        public static BaseApplicationException ParameterStoreDeletionFailed()
+        {
+            return new CustomException(ErrorCodes.ParameterStoreDeletionFailed, ErrorMessages.ParameterStoreDeletionFailed, HttpStatusCode.InternalServerError);
+        }
+
+        public static BaseApplicationException ParameterStoreAdditionFailed()
+        {
+            return new CustomException(ErrorCodes.ParameterStoreAdditionFailed, ErrorMessages.ParameterStoreAdditionFailed, HttpStatusCode.InternalServerError);
+        }
+
+        public static BaseApplicationException ParameterStoreCommunicationError()
+        {
+            return new CustomException(ErrorCodes.ParameterStoreCommunicationError, ErrorMessages.ParameterStoreCommunicationError, HttpStatusCode.InternalServerError);
+        }
     }
 }
