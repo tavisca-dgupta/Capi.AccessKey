@@ -7,5 +7,10 @@
         public string AccessKey { get; set; }
         public bool IskeyActive { get; set; }
         public string UpdatedBy { get; set; }
+        public string ProgramId { get; set; }
+        public string ClientClassicId { get; set; }
+        public string LastUpdatedOn { get; set; }
+        public string CreatedOn { get; set; }
+        
     }
 }
