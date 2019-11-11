@@ -9,8 +9,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\Tavisca.CAPI.AccessKey1\platform-common\Tavisca.Platform.Common.Models\Tavisca.Platform.Common.Models.Core.csproj" />
-    <ProjectReference Include="..\..\Tavisca.CAPI.AccessKey1\platform-common\Tavisca.Platform.Common\Tavisca.Platform.Common.Core.csproj" />
+    <ProjectReference Include="..\..\..\..\..\platform-common\Tavisca.Platform.Common.Models\Tavisca.Platform.Common.Models.Core.csproj" />
+    <ProjectReference Include="..\..\..\..\..\platform-common\Tavisca.Platform.Common\Tavisca.Platform.Common.Core.csproj" />
   </ItemGroup>
 
 
