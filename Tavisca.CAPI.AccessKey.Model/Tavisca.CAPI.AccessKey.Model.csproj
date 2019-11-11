@@ -13,6 +13,7 @@
     <ProjectReference Include="..\..\..\..\..\source\capi_accesskey\platform-common\Tavisca.Platform.Common\Tavisca.Platform.Common.Core.csproj" />
   </ItemGroup>
 
+
   <ItemGroup>
     <Compile Update="Models\Errors\ErrorCodes.Designer.cs">
       <DesignTime>True</DesignTime>
