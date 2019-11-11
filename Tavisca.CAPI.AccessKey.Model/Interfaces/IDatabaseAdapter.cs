@@ -8,6 +8,7 @@ namespace Tavisca.CAPI.AccessKey.Model.Interfaces
     {
         Task<List<AccessKeyModel>> GetAllClients();
         Task<AccessKeyModel> GetClientById(string clientId);
+        Task<AccessKeyModel> GetClientByAccessKey(string accessKey);
         Task<AccessKeyModel> DeactivateKey(AccessKeyModel client);
         Task<AccessKeyModel> ActivateKey(AccessKeyModel accessKey);
         Task<AccessKeyModel> CreateKey(AccessKeyModel key);

@@ -16,10 +16,10 @@ namespace Tavisca.CAPI.AccessKey.Core.Components
         }
         public async Task<AccessKeyModel> Activate(AccessKeyModel keyModel)
         {
-            var clientKey = await _databaseAdapter.GetClientById(keyModel.ClientId);
+            var clientKey = await _databaseAdapter.GetClientByAccessKey(keyModel.AccessKey);
             if (clientKey.IskeyActive == false)
             {
-                if (await _parameterStore.AddAccessKey(keyModel.AccessKey, keyModel.ClientId))
+                if (await _parameterStore.AddAccessKey(clientKey.AccessKey, clientKey.ClientTenantId))
                     return await _databaseAdapter.ActivateKey(keyModel);
                 else
                     throw ServerSide.ParameterStoreNotResponding();

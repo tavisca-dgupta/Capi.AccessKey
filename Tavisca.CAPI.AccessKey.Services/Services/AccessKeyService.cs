@@ -34,11 +34,11 @@ namespace Tavisca.CAPI.AccessKey.Services.Services
             }
             return _keys;
         }
-        public async Task<ActivateKeyResponse> ActivateKey(ActivateKeyRequest key)
+        public async Task<ActivateKeyResponse> ActivateKey(ActivateKeyRequest key, string accessKey)
         {
-            AccessKeyModel accessKey = key.ToAccessKeyModel();
-            accessKey = await _activateKey.Activate(accessKey);
-            return accessKey.ToActivateKeyResponse();
+            AccessKeyModel accessKeyModel = key.ToAccessKeyModel(accessKey);
+            accessKeyModel = await _activateKey.Activate(accessKeyModel);
+            return accessKeyModel.ToActivateKeyResponse();
         }
 
         public async Task<AccessKeyResponse> CreateKey(AccessKeyRequest key)
@@ -48,11 +48,11 @@ namespace Tavisca.CAPI.AccessKey.Services.Services
             return accessKey.ToAccessKeyResponse();
         }
 
-        public async Task<DeactivateKeyResponse> DeactivateKey(DeactivateKeyRequest key)
+        public async Task<DeactivateKeyResponse> DeactivateKey(DeactivateKeyRequest key, string accessKey)
         {
-            AccessKeyModel accessKey = key.ToAccessKeyModel();
-            accessKey = await _deactivateKey.Deactivate(accessKey);
-            return accessKey.ToDeactivateKeyResponse();
+            AccessKeyModel accessKeyModel = key.ToAccessKeyModel(accessKey);
+            accessKeyModel = await _deactivateKey.Deactivate(accessKeyModel);
+            return accessKeyModel.ToDeactivateKeyResponse();
         }        
     }
 }
