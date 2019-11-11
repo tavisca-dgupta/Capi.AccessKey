@@ -11,11 +11,7 @@ namespace Tavisca.CAPI.AccessKey.Services.Tanslator
                 ? null
                 : new AccessKeyModel()
             {
-                ClientId = key.ClientId,
-                AccessKey = key.AccessKey,
-                ClientName = key.ClientName,
-                IskeyActive = key.IskeyActive,
-                UpdatedBy = key.UpdatedBy,
+                UpdatedBy = key.UpdatedBy
             };
         }
     }
