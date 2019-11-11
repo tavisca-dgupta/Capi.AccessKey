@@ -21,57 +21,57 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4. Testing", "4. Testing", 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tavisca.CAPI.AccessKey.UnitTest", "Tavisca.CAPI.AccessKey.UnitTest\Tavisca.CAPI.AccessKey.UnitTest.csproj", "{04D878EC-43B2-4E72-B121-6104739E2562}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "5. Submodules", "5. Submodules", "{63957ED9-F598-4626-9CF6-AA1C9C6A1FC2}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tavisca.CAPI.AccessKey.Core", "Tavisca.CAPI.AccessKey.Core\Tavisca.CAPI.AccessKey.Core.csproj", "{8D4ABCEC-F683-4971-8231-F0F968C53181}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tavisca.CAPI.AccessKey.Web", "Tavisca.CAPI.AccessKey.Web\Tavisca.CAPI.AccessKey.Web.csproj", "{991B1B0F-53F7-484F-9B10-6F17F93BE7DB}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tavisca.Platform.Common.Core", "..\Tavisca.CAPI.AccessKey1\platform-common\Tavisca.Platform.Common\Tavisca.Platform.Common.Core.csproj", "{A0B5114A-F367-4FEA-B948-82C24281BA7D}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "5. Submodules", "5. Submodules", "{4EE50201-FD23-4FEA-BA04-03ACAD1C4B6A}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tavisca.Platform.Common.Models.Core", "..\Tavisca.CAPI.AccessKey1\platform-common\Tavisca.Platform.Common.Models\Tavisca.Platform.Common.Models.Core.csproj", "{BF2206C1-E77D-4F2A-BB88-47F9529C9D3F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tavisca.Platform.Common.Core", "..\..\..\..\source\capi_accesskey\platform-common\Tavisca.Platform.Common\Tavisca.Platform.Common.Core.csproj", "{A0B5114A-F367-4FEA-B948-82C24281BA7D}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tavisca.Platform.Common.Plugins.Json.Core", "..\Tavisca.CAPI.AccessKey1\platform-common\Tavisca.Platform.Common.Plugins.Json\Tavisca.Platform.Common.Plugins.Json.Core.csproj", "{1B2D2E6B-1AB6-46F6-85ED-1945C60A3670}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tavisca.Platform.Common.Models.Core", "..\..\..\..\source\capi_accesskey\platform-common\Tavisca.Platform.Common.Models\Tavisca.Platform.Common.Models.Core.csproj", "{BF2206C1-E77D-4F2A-BB88-47F9529C9D3F}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tavisca.Common.Plugins.RecyclableStreamPool.Core", "..\Tavisca.CAPI.AccessKey1\platform-common\Tavisca.Common.Plugins.RecyclableStreamPool\Tavisca.Common.Plugins.RecyclableStreamPool.Core.csproj", "{EBB51006-F793-4CD2-886D-68F16AB7017E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tavisca.Platform.Common.Plugins.Json.Core", "..\..\..\..\source\capi_accesskey\platform-common\Tavisca.Platform.Common.Plugins.Json\Tavisca.Platform.Common.Plugins.Json.Core.csproj", "{1B2D2E6B-1AB6-46F6-85ED-1945C60A3670}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tavisca.Common.Plugins.StatsD.Core", "..\Tavisca.CAPI.AccessKey1\platform-common\Tavisca.Common.Plugins.StatsD\Tavisca.Common.Plugins.StatsD.Core.csproj", "{7443FBC0-7F06-42AC-865A-336851EF3C0A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tavisca.Common.Plugins.RecyclableStreamPool.Core", "..\..\..\..\source\capi_accesskey\platform-common\Tavisca.Common.Plugins.RecyclableStreamPool\Tavisca.Common.Plugins.RecyclableStreamPool.Core.csproj", "{EBB51006-F793-4CD2-886D-68F16AB7017E}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tavisca.Common.Plugins.StructureMap.Core", "..\Tavisca.CAPI.AccessKey1\platform-common\Tavisca.Common.Plugins.StructureMap\Tavisca.Common.Plugins.StructureMap.Core.csproj", "{0A793462-D2F0-4ADE-959F-BD8FBAF1CF9F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tavisca.Common.Plugins.StatsD.Core", "..\..\..\..\source\capi_accesskey\platform-common\Tavisca.Common.Plugins.StatsD\Tavisca.Common.Plugins.StatsD.Core.csproj", "{7443FBC0-7F06-42AC-865A-336851EF3C0A}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tavisca.Common.Plugins.WebClient.Core", "..\Tavisca.CAPI.AccessKey1\platform-common\Tavisca.Common.Plugins.WebClient\Tavisca.Common.Plugins.WebClient.Core.csproj", "{72D872CE-8A16-404D-AC11-625C820319EF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tavisca.Common.Plugins.StructureMap.Core", "..\..\..\..\source\capi_accesskey\platform-common\Tavisca.Common.Plugins.StructureMap\Tavisca.Common.Plugins.StructureMap.Core.csproj", "{0A793462-D2F0-4ADE-959F-BD8FBAF1CF9F}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tavisca.Common.Plugins.JsonSerializer.Core", "..\Tavisca.CAPI.AccessKey1\platform-common\Tavisca.Common.Plugins.JsonSerializer\Tavisca.Common.Plugins.JsonSerializer.Core.csproj", "{7E6D40E8-8956-4085-9A52-79DDCF54EE05}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tavisca.Common.Plugins.WebClient.Core", "..\..\..\..\source\capi_accesskey\platform-common\Tavisca.Common.Plugins.WebClient\Tavisca.Common.Plugins.WebClient.Core.csproj", "{72D872CE-8A16-404D-AC11-625C820319EF}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tavisca.Common.Plugins.Redis.Core", "..\Tavisca.CAPI.AccessKey1\platform-common\Tavisca.Common.Plugins.Redis\Tavisca.Common.Plugins.Redis.Core.csproj", "{C4E9DFD9-767C-4B31-8C0A-723169952108}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tavisca.Common.Plugins.JsonSerializer.Core", "..\..\..\..\source\capi_accesskey\platform-common\Tavisca.Common.Plugins.JsonSerializer\Tavisca.Common.Plugins.JsonSerializer.Core.csproj", "{7E6D40E8-8956-4085-9A52-79DDCF54EE05}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tavisca.Common.Plugins.ServiceCaller.Core", "..\Tavisca.CAPI.AccessKey1\platform-common\Tavisca.Common.Plugins.ServiceCaller\Tavisca.Common.Plugins.ServiceCaller.Core.csproj", "{5773848D-6D39-45D5-9227-EFDBB01EA219}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tavisca.Common.Plugins.Redis.Core", "..\..\..\..\source\capi_accesskey\platform-common\Tavisca.Common.Plugins.Redis\Tavisca.Common.Plugins.Redis.Core.csproj", "{C4E9DFD9-767C-4B31-8C0A-723169952108}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tavisca.Common.Plugins.Aerospike.Core", "..\Tavisca.CAPI.AccessKey1\platform-common\Tavisca.Common.Plugins.Aerospike\Tavisca.Common.Plugins.Aerospike.Core.csproj", "{174FC4F0-B84B-4B47-8767-42D877CCA8AC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tavisca.Common.Plugins.ServiceCaller.Core", "..\..\..\..\source\capi_accesskey\platform-common\Tavisca.Common.Plugins.ServiceCaller\Tavisca.Common.Plugins.ServiceCaller.Core.csproj", "{5773848D-6D39-45D5-9227-EFDBB01EA219}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tavisca.Common.Plugins.Aws.Core", "..\Tavisca.CAPI.AccessKey1\platform-common\Tavisca.Common.Plugins.Aws\Tavisca.Common.Plugins.Aws.Core.csproj", "{AB2B8641-CC79-4962-A591-EF843109B704}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tavisca.Common.Plugins.Aerospike.Core", "..\..\..\..\source\capi_accesskey\platform-common\Tavisca.Common.Plugins.Aerospike\Tavisca.Common.Plugins.Aerospike.Core.csproj", "{174FC4F0-B84B-4B47-8767-42D877CCA8AC}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tavisca.Common.Plugins.SessionStore.Core", "..\Tavisca.CAPI.AccessKey1\platform-common\Tavisca.Common.Plugins.SessionStore\Tavisca.Common.Plugins.SessionStore.Core.csproj", "{BD88941A-7EC9-4C86-A950-DBC7777D29B9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tavisca.Common.Plugins.Aws.Core", "..\..\..\..\source\capi_accesskey\platform-common\Tavisca.Common.Plugins.Aws\Tavisca.Common.Plugins.Aws.Core.csproj", "{AB2B8641-CC79-4962-A591-EF843109B704}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tavisca.Common.Plugins.Configuration.Core", "..\Tavisca.CAPI.AccessKey1\platform-common\Tavisca.Common.Plugins.Configuration\Tavisca.Common.Plugins.Configuration.Core.csproj", "{0BAC5D3C-AECD-403D-B470-51767B41F314}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tavisca.Common.Plugins.SessionStore.Core", "..\..\..\..\source\capi_accesskey\platform-common\Tavisca.Common.Plugins.SessionStore\Tavisca.Common.Plugins.SessionStore.Core.csproj", "{BD88941A-7EC9-4C86-A950-DBC7777D29B9}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tavisca.Platform.Common.Tests.Core", "..\Tavisca.CAPI.AccessKey1\platform-common\Tavisca.Platform.Common.Tests.Core\Tavisca.Platform.Common.Tests.Core.csproj", "{66F9ADE7-EA6A-4F0A-B08B-7BDA79979D57}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tavisca.Common.Plugins.Configuration.Core", "..\..\..\..\source\capi_accesskey\platform-common\Tavisca.Common.Plugins.Configuration\Tavisca.Common.Plugins.Configuration.Core.csproj", "{0BAC5D3C-AECD-403D-B470-51767B41F314}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tavisca.Common.Plugins.Crypto.Core", "..\Tavisca.CAPI.AccessKey1\platform-common\Tavisca.Common.Plugins.Crypto\Tavisca.Common.Plugins.Crypto.Core.csproj", "{B1DFE218-29BC-436A-B866-74188E776EA2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tavisca.Platform.Common.Tests.Core", "..\..\..\..\source\capi_accesskey\platform-common\Tavisca.Platform.Common.Tests.Core\Tavisca.Platform.Common.Tests.Core.csproj", "{66F9ADE7-EA6A-4F0A-B08B-7BDA79979D57}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tavisca.Platform.Common.WebApi.Core", "..\Tavisca.CAPI.AccessKey1\platform-common\Tavisca.Platform.Common.WebApi\Tavisca.Platform.Common.WebApi.Core.csproj", "{69DB2FCD-3F10-4E8E-A9AE-EB53E638803C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tavisca.Common.Plugins.Crypto.Core", "..\..\..\..\source\capi_accesskey\platform-common\Tavisca.Common.Plugins.Crypto\Tavisca.Common.Plugins.Crypto.Core.csproj", "{B1DFE218-29BC-436A-B866-74188E776EA2}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tavisca.Common.Plugins.ExchangeRate.Core", "..\Tavisca.CAPI.AccessKey1\platform-common\Tavisca.Common.Plugins.ExchangeRate\Tavisca.Common.Plugins.ExchangeRate.Core.csproj", "{E933CE7D-733A-45C3-9160-158CE5494B79}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tavisca.Platform.Common.WebApi.Core", "..\..\..\..\source\capi_accesskey\platform-common\Tavisca.Platform.Common.WebApi\Tavisca.Platform.Common.WebApi.Core.csproj", "{69DB2FCD-3F10-4E8E-A9AE-EB53E638803C}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tavisca.Common.Plugins.RabbitMq.Core", "..\Tavisca.CAPI.AccessKey1\platform-common\Tavisca.Common.Plugins.RabbitMq\Tavisca.Common.Plugins.RabbitMq.Core.csproj", "{467A24FF-2CC0-4E86-A89D-526F57173460}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tavisca.Common.Plugins.ExchangeRate.Core", "..\..\..\..\source\capi_accesskey\platform-common\Tavisca.Common.Plugins.ExchangeRate\Tavisca.Common.Plugins.ExchangeRate.Core.csproj", "{E933CE7D-733A-45C3-9160-158CE5494B79}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tavisca.Common.Plugins.BinarySerializer.Core", "..\Tavisca.CAPI.AccessKey1\platform-common\Tavisca.Common.Plugins.BinarySerializer\Tavisca.Common.Plugins.BinarySerializer.Core.csproj", "{F0AB2C84-FD7B-4481-B406-486B8C77CFBF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tavisca.Common.Plugins.RabbitMq.Core", "..\..\..\..\source\capi_accesskey\platform-common\Tavisca.Common.Plugins.RabbitMq\Tavisca.Common.Plugins.RabbitMq.Core.csproj", "{467A24FF-2CC0-4E86-A89D-526F57173460}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tavisca.Common.Plugins.Cassandra.Core", "..\Tavisca.CAPI.AccessKey1\platform-common\Tavisca.Common.Plugins.Cassandra\Tavisca.Common.Plugins.Cassandra.Core.csproj", "{FD7E1C08-68FF-4000-9909-4E48B1150001}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tavisca.Common.Plugins.BinarySerializer.Core", "..\..\..\..\source\capi_accesskey\platform-common\Tavisca.Common.Plugins.BinarySerializer\Tavisca.Common.Plugins.BinarySerializer.Core.csproj", "{F0AB2C84-FD7B-4481-B406-486B8C77CFBF}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tavisca.Common.Plugins.TransitCodeGenerator", "..\Tavisca.CAPI.AccessKey1\platform-common\Tavisca.Common.Plugins.TransitCodeGenerator\Tavisca.Common.Plugins.TransitCodeGenerator.csproj", "{95223FCB-0D1A-4389-96A9-205D01378AC1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tavisca.Common.Plugins.Cassandra.Core", "..\..\..\..\source\capi_accesskey\platform-common\Tavisca.Common.Plugins.Cassandra\Tavisca.Common.Plugins.Cassandra.Core.csproj", "{FD7E1C08-68FF-4000-9909-4E48B1150001}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tavisca.Common.Plugins.Cryptography.Core", "..\Tavisca.CAPI.AccessKey1\platform-common\Tavisca.Common.Plugins.Cryptography\Tavisca.Common.Plugins.Cryptography.Core.csproj", "{2855E666-80C0-48CC-9781-E28A29B76BD1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tavisca.Common.Plugins.TransitCodeGenerator", "..\..\..\..\source\capi_accesskey\platform-common\Tavisca.Common.Plugins.TransitCodeGenerator\Tavisca.Common.Plugins.TransitCodeGenerator.csproj", "{95223FCB-0D1A-4389-96A9-205D01378AC1}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tavisca.Common.Plugins.Cryptography.Core", "..\..\..\..\source\capi_accesskey\platform-common\Tavisca.Common.Plugins.Cryptography\Tavisca.Common.Plugins.Cryptography.Core.csproj", "{2855E666-80C0-48CC-9781-E28A29B76BD1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -208,32 +208,32 @@ Global
 		{EAF0035C-A8CA-4D38-A92C-C3EB85E9C6E3} = {08801D87-F368-491C-9DA5-F7EB77E6B37D}
 		{FE65F069-8981-41D5-B656-0A31B6C98F65} = {FE0831ED-AFA0-425C-86A4-5A277BFCC41D}
 		{04D878EC-43B2-4E72-B121-6104739E2562} = {FE65F069-8981-41D5-B656-0A31B6C98F65}
-		{63957ED9-F598-4626-9CF6-AA1C9C6A1FC2} = {FE0831ED-AFA0-425C-86A4-5A277BFCC41D}
 		{8D4ABCEC-F683-4971-8231-F0F968C53181} = {5A16842B-38BF-444C-8B33-4DBA7F0B3563}
 		{991B1B0F-53F7-484F-9B10-6F17F93BE7DB} = {FC16A1B1-D4B4-4D40-8784-548D0BBDABE8}
-		{A0B5114A-F367-4FEA-B948-82C24281BA7D} = {63957ED9-F598-4626-9CF6-AA1C9C6A1FC2}
-		{BF2206C1-E77D-4F2A-BB88-47F9529C9D3F} = {63957ED9-F598-4626-9CF6-AA1C9C6A1FC2}
-		{1B2D2E6B-1AB6-46F6-85ED-1945C60A3670} = {63957ED9-F598-4626-9CF6-AA1C9C6A1FC2}
-		{EBB51006-F793-4CD2-886D-68F16AB7017E} = {63957ED9-F598-4626-9CF6-AA1C9C6A1FC2}
-		{7443FBC0-7F06-42AC-865A-336851EF3C0A} = {63957ED9-F598-4626-9CF6-AA1C9C6A1FC2}
-		{0A793462-D2F0-4ADE-959F-BD8FBAF1CF9F} = {63957ED9-F598-4626-9CF6-AA1C9C6A1FC2}
-		{72D872CE-8A16-404D-AC11-625C820319EF} = {63957ED9-F598-4626-9CF6-AA1C9C6A1FC2}
-		{7E6D40E8-8956-4085-9A52-79DDCF54EE05} = {63957ED9-F598-4626-9CF6-AA1C9C6A1FC2}
-		{C4E9DFD9-767C-4B31-8C0A-723169952108} = {63957ED9-F598-4626-9CF6-AA1C9C6A1FC2}
-		{5773848D-6D39-45D5-9227-EFDBB01EA219} = {63957ED9-F598-4626-9CF6-AA1C9C6A1FC2}
-		{174FC4F0-B84B-4B47-8767-42D877CCA8AC} = {63957ED9-F598-4626-9CF6-AA1C9C6A1FC2}
-		{AB2B8641-CC79-4962-A591-EF843109B704} = {63957ED9-F598-4626-9CF6-AA1C9C6A1FC2}
-		{BD88941A-7EC9-4C86-A950-DBC7777D29B9} = {63957ED9-F598-4626-9CF6-AA1C9C6A1FC2}
-		{0BAC5D3C-AECD-403D-B470-51767B41F314} = {63957ED9-F598-4626-9CF6-AA1C9C6A1FC2}
-		{66F9ADE7-EA6A-4F0A-B08B-7BDA79979D57} = {63957ED9-F598-4626-9CF6-AA1C9C6A1FC2}
-		{B1DFE218-29BC-436A-B866-74188E776EA2} = {63957ED9-F598-4626-9CF6-AA1C9C6A1FC2}
-		{69DB2FCD-3F10-4E8E-A9AE-EB53E638803C} = {63957ED9-F598-4626-9CF6-AA1C9C6A1FC2}
-		{E933CE7D-733A-45C3-9160-158CE5494B79} = {63957ED9-F598-4626-9CF6-AA1C9C6A1FC2}
-		{467A24FF-2CC0-4E86-A89D-526F57173460} = {63957ED9-F598-4626-9CF6-AA1C9C6A1FC2}
-		{F0AB2C84-FD7B-4481-B406-486B8C77CFBF} = {63957ED9-F598-4626-9CF6-AA1C9C6A1FC2}
-		{FD7E1C08-68FF-4000-9909-4E48B1150001} = {63957ED9-F598-4626-9CF6-AA1C9C6A1FC2}
-		{95223FCB-0D1A-4389-96A9-205D01378AC1} = {63957ED9-F598-4626-9CF6-AA1C9C6A1FC2}
-		{2855E666-80C0-48CC-9781-E28A29B76BD1} = {63957ED9-F598-4626-9CF6-AA1C9C6A1FC2}
+		{4EE50201-FD23-4FEA-BA04-03ACAD1C4B6A} = {FE0831ED-AFA0-425C-86A4-5A277BFCC41D}
+		{A0B5114A-F367-4FEA-B948-82C24281BA7D} = {4EE50201-FD23-4FEA-BA04-03ACAD1C4B6A}
+		{BF2206C1-E77D-4F2A-BB88-47F9529C9D3F} = {4EE50201-FD23-4FEA-BA04-03ACAD1C4B6A}
+		{1B2D2E6B-1AB6-46F6-85ED-1945C60A3670} = {4EE50201-FD23-4FEA-BA04-03ACAD1C4B6A}
+		{EBB51006-F793-4CD2-886D-68F16AB7017E} = {4EE50201-FD23-4FEA-BA04-03ACAD1C4B6A}
+		{7443FBC0-7F06-42AC-865A-336851EF3C0A} = {4EE50201-FD23-4FEA-BA04-03ACAD1C4B6A}
+		{0A793462-D2F0-4ADE-959F-BD8FBAF1CF9F} = {4EE50201-FD23-4FEA-BA04-03ACAD1C4B6A}
+		{72D872CE-8A16-404D-AC11-625C820319EF} = {4EE50201-FD23-4FEA-BA04-03ACAD1C4B6A}
+		{7E6D40E8-8956-4085-9A52-79DDCF54EE05} = {4EE50201-FD23-4FEA-BA04-03ACAD1C4B6A}
+		{C4E9DFD9-767C-4B31-8C0A-723169952108} = {4EE50201-FD23-4FEA-BA04-03ACAD1C4B6A}
+		{5773848D-6D39-45D5-9227-EFDBB01EA219} = {4EE50201-FD23-4FEA-BA04-03ACAD1C4B6A}
+		{174FC4F0-B84B-4B47-8767-42D877CCA8AC} = {4EE50201-FD23-4FEA-BA04-03ACAD1C4B6A}
+		{AB2B8641-CC79-4962-A591-EF843109B704} = {4EE50201-FD23-4FEA-BA04-03ACAD1C4B6A}
+		{BD88941A-7EC9-4C86-A950-DBC7777D29B9} = {4EE50201-FD23-4FEA-BA04-03ACAD1C4B6A}
+		{0BAC5D3C-AECD-403D-B470-51767B41F314} = {4EE50201-FD23-4FEA-BA04-03ACAD1C4B6A}
+		{66F9ADE7-EA6A-4F0A-B08B-7BDA79979D57} = {4EE50201-FD23-4FEA-BA04-03ACAD1C4B6A}
+		{B1DFE218-29BC-436A-B866-74188E776EA2} = {4EE50201-FD23-4FEA-BA04-03ACAD1C4B6A}
+		{69DB2FCD-3F10-4E8E-A9AE-EB53E638803C} = {4EE50201-FD23-4FEA-BA04-03ACAD1C4B6A}
+		{E933CE7D-733A-45C3-9160-158CE5494B79} = {4EE50201-FD23-4FEA-BA04-03ACAD1C4B6A}
+		{467A24FF-2CC0-4E86-A89D-526F57173460} = {4EE50201-FD23-4FEA-BA04-03ACAD1C4B6A}
+		{F0AB2C84-FD7B-4481-B406-486B8C77CFBF} = {4EE50201-FD23-4FEA-BA04-03ACAD1C4B6A}
+		{FD7E1C08-68FF-4000-9909-4E48B1150001} = {4EE50201-FD23-4FEA-BA04-03ACAD1C4B6A}
+		{95223FCB-0D1A-4389-96A9-205D01378AC1} = {4EE50201-FD23-4FEA-BA04-03ACAD1C4B6A}
+		{2855E666-80C0-48CC-9781-E28A29B76BD1} = {4EE50201-FD23-4FEA-BA04-03ACAD1C4B6A}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {A3D539BD-00E9-4965-B123-1307CF6F84D1}

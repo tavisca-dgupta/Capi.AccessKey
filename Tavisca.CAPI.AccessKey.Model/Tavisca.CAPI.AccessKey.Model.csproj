@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>netcoreapp2.2</TargetFramework>
@@ -9,8 +9,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\Tavisca.CAPI.AccessKey1\platform-common\Tavisca.Platform.Common.Models\Tavisca.Platform.Common.Models.Core.csproj" />
-    <ProjectReference Include="..\..\Tavisca.CAPI.AccessKey1\platform-common\Tavisca.Platform.Common\Tavisca.Platform.Common.Core.csproj" />
+    <ProjectReference Include="..\..\..\..\..\source\capi_accesskey\platform-common\Tavisca.Platform.Common.Models\Tavisca.Platform.Common.Models.Core.csproj" />
+    <ProjectReference Include="..\..\..\..\..\source\capi_accesskey\platform-common\Tavisca.Platform.Common\Tavisca.Platform.Common.Core.csproj" />
   </ItemGroup>
 
   <ItemGroup>

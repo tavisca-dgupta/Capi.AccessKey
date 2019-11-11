@@ -9,7 +9,7 @@ namespace Tavisca.CAPI.AccessKey.MockProvider.ParameterStoreProvider.Utility
 {
     public class ParameterStore
     {
-        private static readonly string _parameterStorePath = "C:/Tavisca.Capi.AccessKey/Tavisca.CAPI.AccessKey.MockProvider/ParameterStoreProvider/JsonFile/MockParameterStoreData.json";
+        private static readonly string _parameterStorePath = @"C:\Users\ankadam\Desktop\Backend\refactor\Capi.AccessKey\Tavisca.CAPI.AccessKey.MockProvider\ParameterStoreProvider\JsonFile\MockParameterStoreData.json";
         public static Task<bool> AddKey(ParameterStoreModel parameterStore)
         {
             try

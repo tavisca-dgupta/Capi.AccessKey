@@ -9,7 +9,7 @@
     "CreateDate": "12/07/2016",
     "UpdateDate": "03-11-2019",
     "UpdatedBy": "Dharna"
-  },  
+  },
   {
     "ClientId": "1gkrcs8g740",
     "ClientName": "Cx Loyalty",
@@ -49,9 +49,42 @@
     "ProgramGroup": "Asia pacific",
     "Program": "Diwali discount",
     "AccessKey": "f12d1a6e-1fa6-4fd0-88b0-3e09fd0d99b2",
-    "IskeyActive": true,
+    "IskeyActive": false,
     "CreateDate": "10/07/2016",
-    "UpdateDate": "01/03/2018",
+    "UpdateDate": "05-11-2019",
     "UpdatedBy": "Anil kadam"
+  },
+  {
+    "ClientId": "citi_123",
+    "ClientName": "citi",
+    "ProgramGroup": "CPG 1",
+    "Program": "Program 1",
+    "AccessKey": "f11594c0-d5f5-488c-b7b9-21431e2f1f83",
+    "IskeyActive": false,
+    "CreateDate": "05-11-2019",
+    "UpdateDate": "05-11-2019",
+    "UpdatedBy": "CuttingChai"
+  },
+  {
+    "ClientId": "vodafone_123",
+    "ClientName": "vodafone",
+    "ProgramGroup": "CPG 3",
+    "Program": "Program 2",
+    "AccessKey": "fd29d75f-ecd5-411c-8862-347bece97b97",
+    "IskeyActive": false,
+    "CreateDate": "05-11-2019",
+    "UpdateDate": "05-11-2019",
+    "UpdatedBy": "CuttingChai"
+  },
+  {
+    "ClientId": "jp Morgan_123",
+    "ClientName": "jp Morgan",
+    "ProgramGroup": "CPG 4",
+    "Program": "Program 2",
+    "AccessKey": "53060f17-71f0-44c6-bc27-27191c931bc6",
+    "IskeyActive": false,
+    "CreateDate": "05-11-2019",
+    "UpdateDate": "05-11-2019",
+    "UpdatedBy": "CuttingChai"
   }
 ]
