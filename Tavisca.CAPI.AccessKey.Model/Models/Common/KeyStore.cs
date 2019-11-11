@@ -6,7 +6,7 @@ namespace Tavisca.CAPI.AccessKey.Model.Models.Common
 {
     public class KeyStore
     {
-        public static readonly string ApplicationName = "capi_key_generation";
+        public static readonly string ApplicationName = "capi";
         public static class LogKeys
         {
             public const string Api = "api";
