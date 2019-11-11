@@ -18,6 +18,11 @@ namespace Tavisca.CAPI.AccessKey.MockProvider.Tanslator
                 AccessKey = client.AccessKey,
                 ClientName = client.ClientName,
                 IskeyActive = client.IskeyActive,
+                ClientTenantId = client.ClientTenantId,
+                ClientClassicId = client.ClientClassicId,
+                ProgramId = client.ProgramId,
+                CreatedOn = client.CreatedOn,
+                LastUpdatedOn = client.LastUpdatedOn
             };
         }
     }

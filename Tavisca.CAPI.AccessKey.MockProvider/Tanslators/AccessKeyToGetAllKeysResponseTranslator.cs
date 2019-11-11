@@ -10,15 +10,20 @@ namespace Tavisca.CAPI.AccessKey.MockProvider.Tanslators
             return key == null
                 ? null
                 : new GetAllKeysDataResponse()
-            {
-                ClientId = key.ClientId,
-                ClientName = key.ClientName,
-                Program = key.Program,
-                ProgramGroup = key.ProgramGroup,
-                AccessKey = key.AccessKey,
-                IskeyActive = key.IskeyActive,
-                UpdatedBy = key.UpdatedBy
-            };
+                {
+                    ClientId = key.ClientId,
+                    ClientName = key.ClientName,
+                    Program = key.Program,
+                    ProgramGroup = key.ProgramGroup,
+                    AccessKey = key.AccessKey,
+                    IskeyActive = key.IskeyActive,
+                    UpdatedBy = key.UpdatedBy,
+                    ClientTenantId = key.ClientTenantId,
+                    ClientClassicId = key.ClientClassicId,
+                    ProgramId = key.ProgramId,
+                    CreatedOn = key.CreatedOn,
+                    LastUpdatedOn = key.LastUpdatedOn
+                };
         }
     }
 }

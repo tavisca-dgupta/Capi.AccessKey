@@ -10,13 +10,9 @@ namespace Tavisca.CAPI.AccessKey.MockProvider.Tanslators
             return accessKey == null
                 ? null
                 : new DeactivateKeyDataRequest()
-            {
-                ClientName = accessKey.ClientName,
-                ClientId = accessKey.ClientId,
-                AccessKey = accessKey.AccessKey,
-                IskeyActive = accessKey.IskeyActive,
-                UpdatedBy = accessKey.UpdatedBy,
-            };
+                {
+                    UpdatedBy = accessKey.UpdatedBy
+                };
         }
     }
 }
