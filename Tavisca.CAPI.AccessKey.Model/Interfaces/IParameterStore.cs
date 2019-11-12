@@ -5,7 +5,7 @@ namespace Tavisca.CAPI.AccessKey.Model.Interfaces
 {
     public interface IParameterStore
     {
-        Task<bool> AddAccessKey(string accessKey, string clientId);
-        Task<bool> DeleteAccessKey(string accessKey);
+        Task<bool> AddKey(ParameterStoreModel parameterStoreModel);
+        Task<bool> DeleteKey(ParameterStoreModel parameterStoreModel);
     }
 }

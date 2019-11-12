@@ -131,5 +131,26 @@ namespace Tavisca.CAPI.AccessKey.Model.Models.Errors {
                 return ResourceManager.GetString("ParameterStoreNotResponding", resourceCulture);
             }
         }
+        internal static string ParameterStoreDeletionFailed
+        {
+            get
+            {
+                return ResourceManager.GetString("ParameterStoreDeletionFailed", resourceCulture);
+            }
+        }
+        internal static string ParameterStoreAdditionFailed
+        {
+            get
+            {
+                return ResourceManager.GetString("ParameterStoreAdditionFailed", resourceCulture);
+            }
+        }
+        internal static string ParameterStoreCommunicationError
+        {
+            get
+            {
+                return ResourceManager.GetString("ParameterStoreCommunicationError", resourceCulture);
+            }
+        }
     }
 }

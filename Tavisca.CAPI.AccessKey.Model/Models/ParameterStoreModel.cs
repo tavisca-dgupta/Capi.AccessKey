@@ -2,7 +2,7 @@
 {
     public class ParameterStoreModel
     {
-        public string AccessKey { get; set; }
-        public string ClientId { get; set; }
+        public string Key { get; set; }
+        public string Value { get; set; }
     }
 }

@@ -2,7 +2,7 @@
 using Tavisca.CAPI.AccessKey.Model.Interfaces;
 using Tavisca.CAPI.AccessKey.Model.Models;
 using Tavisca.CAPI.AccessKey.Model.Models.Errors;
-
+using Tavisca.CAPI.AccessKey.Core.Translator;
 namespace Tavisca.CAPI.AccessKey.Core.Components
 {
     public class DeactivateKeyComponent: IDeactivateKey
@@ -19,7 +19,7 @@ namespace Tavisca.CAPI.AccessKey.Core.Components
             var clientKey = await _databaseAdapter.GetClientById(keyModel.ClientId);
             if(clientKey.IskeyActive)
             {
-                if (await _parameterStore.DeleteAccessKey(keyModel.AccessKey))
+                if (await _parameterStore.DeleteKey(keyModel.ToParameterStoreModel()))
                     return await _databaseAdapter.DeactivateKey(keyModel);
                 else
                     throw ServerSide.ParameterStoreNotResponding();

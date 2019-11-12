@@ -2,7 +2,7 @@
 using Tavisca.CAPI.AccessKey.Model.Interfaces;
 using Tavisca.CAPI.AccessKey.Model.Models;
 using Tavisca.CAPI.AccessKey.Model.Models.Errors;
-
+using Tavisca.CAPI.AccessKey.Core.Translator;
 namespace Tavisca.CAPI.AccessKey.Core.Components
 {
     public class ActivateKeyComponent : IActivateKey
@@ -19,7 +19,7 @@ namespace Tavisca.CAPI.AccessKey.Core.Components
             var clientKey = await _databaseAdapter.GetClientById(keyModel.ClientId);
             if (clientKey.IskeyActive == false)
             {
-                if (await _parameterStore.AddAccessKey(keyModel.AccessKey, keyModel.ClientId))
+                if (await _parameterStore.AddKey(keyModel.ToParameterStoreModel()))
                     return await _databaseAdapter.ActivateKey(keyModel);
                 else
                     throw ServerSide.ParameterStoreNotResponding();
