@@ -12,7 +12,7 @@ namespace Tavisca.CAPI.AccessKey.MockProvider.Tanslators
                 : new AccessKeyModel()
                 {
                     AccessKey = client.AccessKey,
-                    IskeyActive = client.IskeyActive,
+                    IsKeyActive = client.IsKeyActive,
                     UpdatedBy = client.UpdatedBy,
                     LastUpdatedOn = client.LastUpdatedOn
                 };

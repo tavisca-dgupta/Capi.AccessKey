@@ -12,7 +12,7 @@ namespace Tavisca.CAPI.AccessKey.Services.Tanslator
                 : new ActivateKeyResponse()
             {
                 AccessKey = keyModel.AccessKey,
-                IskeyActive = keyModel.IskeyActive,
+                IsKeyActive = keyModel.IsKeyActive,
                 UpdatedBy = keyModel.UpdatedBy,
                 ClientTenantId = keyModel.ClientTenantId,
                 LastUpdatedOn = keyModel.LastUpdatedOn

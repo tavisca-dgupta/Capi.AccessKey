@@ -45,7 +45,7 @@ namespace Tavisca.CAPI.AccessKey.MockProvider.DatabaseProvider
             {
                 if (clients[i].AccessKey == client.AccessKey)
                 {
-                    clients[i].IskeyActive = false;
+                    clients[i].IsKeyActive = false;
                     clients[i].UpdatedBy = client.UpdatedBy;
                     break;
                 }
@@ -87,7 +87,7 @@ namespace Tavisca.CAPI.AccessKey.MockProvider.DatabaseProvider
             {
                 if (clients[i].AccessKey == client.AccessKey)
                 {
-                    clients[i].IskeyActive = true;
+                    clients[i].IsKeyActive = true;
                     clients[i].UpdatedBy = client.UpdatedBy;
                     break;
                 }

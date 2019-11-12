@@ -26,7 +26,7 @@ namespace Tavisca.CAPI.AccessKey.Core.Components
             if(!(await _databaseAdapter.IsKeyPresent(accessKey.AccessKey)))
             {
                 accessKey.AccessKey = GenerateAccessKey();
-                accessKey.IskeyActive = false;
+                accessKey.IsKeyActive = false;
                 return await _databaseAdapter.CreateKey(accessKey);
             }
             throw ClientSide.KeyAlreadyExists();

@@ -7,7 +7,7 @@
         public string ProgramGroup { get; set; }
         public string Program { get; set; }
         public string AccessKey { get; set; }
-        public bool IskeyActive { get; set; }
+        public bool IsKeyActive { get; set; }
         public string UpdatedBy { get; set; }
         public string ClientTenantId { get; set; }
         public string ProgramId { get; set; }

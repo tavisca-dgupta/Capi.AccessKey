@@ -16,7 +16,7 @@ namespace Tavisca.CAPI.AccessKey.MockProvider.Tanslators
                     Program = key.Program,
                     ProgramGroup = key.ProgramGroup,
                     AccessKey = key.AccessKey,
-                    IskeyActive = key.IskeyActive,
+                    IsKeyActive = key.IsKeyActive,
                     UpdatedBy = key.UpdatedBy,
                     ClientTenantId = key.ClientTenantId,
                     ClientClassicId = key.ClientClassicId,
