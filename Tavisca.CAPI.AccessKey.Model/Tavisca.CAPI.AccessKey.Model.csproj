@@ -14,9 +14,10 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\platform-common\Tavisca.Platform.Common.Models\Tavisca.Platform.Common.Models.Core.csproj" />
-    <ProjectReference Include="..\..\platform-common\Tavisca.Platform.Common\Tavisca.Platform.Common.Core.csproj" />
+    <ProjectReference Include="..\..\..\..\..\platform-common\Tavisca.Platform.Common.Models\Tavisca.Platform.Common.Models.Core.csproj" />
+    <ProjectReference Include="..\..\..\..\..\platform-common\Tavisca.Platform.Common\Tavisca.Platform.Common.Core.csproj" />
   </ItemGroup>
+
 
   <ItemGroup>
     <Compile Update="Models\Errors\ErrorCodes.Designer.cs">

@@ -2,7 +2,7 @@
 
 namespace Tavisca.CAPI.AccessKey.Model.Models.Logging
 {
-    public class CAPIApiLog:ApiLog
+    public class CAPIApiLog : ApiLog
     {
         public string ClientId { get; set; }
         public string ClientName { get; set; }

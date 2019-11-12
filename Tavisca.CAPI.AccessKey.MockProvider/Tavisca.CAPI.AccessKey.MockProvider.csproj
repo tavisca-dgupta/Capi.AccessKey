@@ -24,7 +24,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Tavisca.CAPI.AccessKey.Model\Tavisca.CAPI.AccessKey.Model.csproj" />
-    <ProjectReference Include="..\Tavisca.CAPI.AccessKey.Services\Tavisca.CAPI.AccessKey.Services.csproj" />
   </ItemGroup>
 
   <ItemGroup>
