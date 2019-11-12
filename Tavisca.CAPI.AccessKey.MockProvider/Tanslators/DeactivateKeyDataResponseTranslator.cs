@@ -10,16 +10,12 @@ namespace Tavisca.CAPI.AccessKey.MockProvider.Tanslators
             return client == null
                 ? null
                 : new AccessKeyModel()
-            {
-                ClientId = client.ClientId,
-                ClientName = client.ClientName,
-                AccessKey = client.AccessKey,
-                IskeyActive = client.IskeyActive,
-                Program = client.Program,
-                ProgramGroup = client.ProgramGroup,
-                UpdatedBy = client.UpdatedBy
-
-            };
+                {
+                    AccessKey = client.AccessKey,
+                    IsKeyActive = client.IsKeyActive,
+                    UpdatedBy = client.UpdatedBy,
+                    LastUpdatedOn = client.LastUpdatedOn
+                };
         }
     }
 }

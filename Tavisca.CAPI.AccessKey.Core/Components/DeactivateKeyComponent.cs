@@ -16,8 +16,8 @@ namespace Tavisca.CAPI.AccessKey.Core.Components
         }
         public async Task<AccessKeyModel> Deactivate(AccessKeyModel keyModel)
         {
-            var clientKey = await _databaseAdapter.GetClientById(keyModel.ClientId);
-            if(clientKey.IskeyActive)
+            var clientKey = await _databaseAdapter.GetClientByAccessKey(keyModel.AccessKey);
+            if(clientKey.IsKeyActive)
             {
                 if (await _parameterStore.DeleteKey(keyModel.ToParameterStoreModel()))
                     return await _databaseAdapter.DeactivateKey(keyModel);

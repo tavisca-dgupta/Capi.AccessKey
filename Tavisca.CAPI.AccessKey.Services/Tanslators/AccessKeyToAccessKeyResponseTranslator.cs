@@ -14,8 +14,14 @@ namespace Tavisca.CAPI.AccessKey.Services.Tanslator
                 ClientId = key.ClientId,
                 ClientName = key.ClientName,
                 AccessKey = key.AccessKey,
-                IskeyActive = key.IskeyActive,
-                UpdatedBy = key.UpdatedBy
+                IsKeyActive = key.IsKeyActive,
+                UpdatedBy = key.UpdatedBy,
+                ProgramGroup = key.ProgramGroup,
+                Program = key.Program,
+                ProgramId = key.ProgramId,
+                ClientClassicId = key.ClientClassicId,
+                LastUpdatedOn = key.LastUpdatedOn,
+                CreatedOn = key.CreatedOn
             };
         }
     }

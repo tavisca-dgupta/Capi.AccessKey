@@ -12,10 +12,9 @@ namespace Tavisca.CAPI.AccessKey.Services.Tanslator
                 : new DeactivateKeyResponse()
             {
                 AccessKey = key.AccessKey,
-                ClientId = key.ClientId,
-                ClientName = key.ClientName,
-                IskeyActive = key.IskeyActive,
+                IsKeyActive = key.IsKeyActive,
                 UpdatedBy = key.UpdatedBy,
+                LastUpdatedOn = key.LastUpdatedOn
             };
         }
     }

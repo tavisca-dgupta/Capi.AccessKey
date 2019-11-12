@@ -7,5 +7,8 @@
         public string ProgramGroup { get; set; }
         public string Program { get; set; }
         public string UpdatedBy { get; set; }
+        public string ClientTenantId { get; set; }
+        public string ProgramId { get; set; }
+        public string ClientClassicId { get; set; }
     }
 }
