@@ -4,7 +4,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using Tavisca.Platform.Common.Configurations;
 
-namespace capi_accesskey.Middlewares
+namespace Tavisca.CAPI.AccessKey.Web.Middleware
 {
     public class HealthCheckMiddleware : IHealthCheck
     {

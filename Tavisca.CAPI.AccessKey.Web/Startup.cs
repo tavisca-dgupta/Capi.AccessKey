@@ -3,18 +3,14 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Tavisca.CAPI.AccessKey.Core.Components;
-using Tavisca.CAPI.AccessKey.MockProvider.DatabaseProvider;
-using Tavisca.CAPI.AccessKey.MockProvider.ParameterStore;
-using Tavisca.CAPI.AccessKey.Model.Interfaces;
-using Tavisca.CAPI.AccessKey.Services.Services;
-using Tavisca.CAPI.AccessKey.MockProvider.ParameterStore.Utility;
 using System;
 using Tavisca.CAPI.AccessKey.Web.Middleware.Extensions;
 using Tavisca.Common.Plugins.StructureMap;
 using Tavisca.Platform.Common.Containers;
 using Tavisca.Platform.Common.Core.ServiceLocator;
-
+using Tavisca.CAPI.AccessKey.Web.Middleware;
+using Tavisca.CAPI.AccessKey.Web.Middleware.Extenstions;
+using capi_accesskey.Middlewares.Extensions;
 
 namespace Tavisca.CAPI.AccessKey.Web
 {
@@ -30,14 +26,6 @@ namespace Tavisca.CAPI.AccessKey.Web
         // This method gets called by the runtime. Use this method to add services to the container.
         public IServiceProvider ConfigureServices(IServiceCollection services)
         {
-            services.AddTransient<IAccessKeyService, AccessKeyService>();
-            services.AddSingleton<IDatabaseAdapter, MockAccessKeyDatabase>();
-            services.AddTransient<ICreateKey, CreateKeyComponent>();
-            services.AddTransient<IDeactivateKey, DeactivateKeyComponent>();
-            services.AddTransient<IActivateKey, ActivateKeyComponent>();
-            services.AddTransient<IAccessKeyComponent, AccessKeyComponent>();
-            services.AddSingleton<IParameterStore, ParameterStore>();
-            services.AddSingleton<IParameterStoreProvider, ParameterStoreProvider>();
             services.AddHealthChecks()
             .AddCheck<HealthCheckMiddleware>("example_health_check");
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
