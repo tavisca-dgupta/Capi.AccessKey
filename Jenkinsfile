@@ -60,6 +60,8 @@ pipeline{
             steps{
                 sh '''
                     echo '====================Restore Project Start ================'
+                    git submodule sync 
+                    git submodule update --init --recursive
                     dotnet restore ${SOLUTION_PATH} --source https://api.nuget.org/v3/index.json
                     echo '=====================Restore Project Completed============'
                     echo '====================Build Project Start ================'
