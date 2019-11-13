@@ -58,7 +58,7 @@ pipeline{
                 expression{params.RELEASE_ENVIRONMENT == "Build" || params.RELEASE_ENVIRONMENT == "Deploy" }
             }
             steps{
-                powershell '''
+                sh '''
                     echo '====================Restore Project Start ================'
                     dotnet restore ${SOLUTION_PATH} --source https://api.nuget.org/v3/index.json
                     echo '=====================Restore Project Completed============'
@@ -80,10 +80,10 @@ pipeline{
             }
             steps{
                 
-                powershell "docker build publish/ --tag=${DOCKERHUB_REPO}:${BUILD_NUMBER}"    
-                powershell "docker tag ${DOCKERHUB_REPO}:${BUILD_NUMBER} ${DOCKER_USER_NAME}/${DOCKERHUB_REPO}:${BUILD_NUMBER}"
-                powershell "docker login -u ${DOCKER_USER_NAME} -p ${DOCKER_PASSWORD}" 
-                powershell "docker push ${DOCKER_USER_NAME}/${DOCKERHUB_REPO}:${BUILD_NUMBER}"
+                sh "docker build publish/ --tag=${DOCKERHUB_REPO}:${BUILD_NUMBER}"    
+                sh "docker tag ${DOCKERHUB_REPO}:${BUILD_NUMBER} ${DOCKER_USER_NAME}/${DOCKERHUB_REPO}:${BUILD_NUMBER}"
+                sh "docker login -u ${DOCKER_USER_NAME} -p ${DOCKER_PASSWORD}" 
+                sh "docker push ${DOCKER_USER_NAME}/${DOCKERHUB_REPO}:${BUILD_NUMBER}"
         }
     }
 }
