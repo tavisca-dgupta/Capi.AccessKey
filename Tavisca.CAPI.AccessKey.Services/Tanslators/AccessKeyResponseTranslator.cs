@@ -3,7 +3,7 @@ using Tavisca.CAPI.AccessKey.Model.Models.DataContracts;
 
 namespace Tavisca.CAPI.AccessKey.Services.Tanslator
 {
-    public static class AccessKeyToAccessKeyResponseTranslator
+    public static class AccessKeyResponseTranslator
     {
         public static AccessKeyResponse ToAccessKeyResponse(this AccessKeyModel key)
         {
