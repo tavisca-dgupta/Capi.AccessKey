@@ -12,6 +12,6 @@ namespace Tavisca.CAPI.AccessKey.Model.Interfaces
         Task<AccessKeyModel> DeactivateKey(AccessKeyModel client);
         Task<AccessKeyModel> ActivateKey(AccessKeyModel accessKey);
         Task<AccessKeyModel> CreateKey(AccessKeyModel key);
-        Task<bool> IsKeyPresent(string clientId);
+        Task<bool> IsKeyPresent(string programId);
     }
 }
