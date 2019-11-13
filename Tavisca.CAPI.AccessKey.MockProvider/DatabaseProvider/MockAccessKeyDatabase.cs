@@ -58,12 +58,12 @@ namespace Tavisca.CAPI.AccessKey.MockProvider.DatabaseProvider
             throw ServerSide.AccessKeyNotDeactivated();
          }
 
-        public async Task<bool> IsKeyPresent(string accessKey)
+        public async Task<bool> IsKeyPresent(string programId)
         {
             List<AccessKeyModel> clients = await GetAllClients();
             for (int i = 0; i < clients.Count; i++)
             {
-                if (clients[i].AccessKey.Equals(accessKey))
+                if (clients[i].ProgramId.Equals(programId))
                     return true;
             }
             return false;
