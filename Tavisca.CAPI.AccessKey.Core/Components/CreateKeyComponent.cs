@@ -23,7 +23,7 @@ namespace Tavisca.CAPI.AccessKey.Core.Components
 
         public async Task<AccessKeyModel> Create(AccessKeyModel accessKey)
         {
-            if(!(await _databaseAdapter.IsKeyPresent(accessKey.AccessKey)))
+            if(!(await _databaseAdapter.IsKeyPresent(accessKey.ProgramId)))
             {
                 accessKey.AccessKey = GenerateAccessKey();
                 accessKey.IsKeyActive = false;
