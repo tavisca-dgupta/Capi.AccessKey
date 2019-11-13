@@ -28,24 +28,24 @@ namespace Tavisca.CAPI.AccessKey.Web.Controllers
         }
 
         [HttpPost]
-        [Route("generatenew")]
+        [Route("new")]
         public async Task<ActionResult<AccessKeyResponse>> Create([FromBody] AccessKeyRequest key)
         {
             var result = await _accessKeyService.CreateKey(key);
             return result == null ? (ActionResult<AccessKeyResponse>)BadRequest() : (ActionResult<AccessKeyResponse>)Ok(result);
         }
         [HttpPut]
-        [Route("activate/{clientId}")]
-        public async Task<ActionResult<ActivateKeyResponse>> Activate(string clientId, [FromBody] ActivateKeyRequest accessKey)
+        [Route("activate/{accessKey}")]
+        public async Task<ActionResult<ActivateKeyResponse>> Activate(string accessKey, [FromBody] ActivateKeyRequest accessKeyRequest)
         {
-            var result = await _accessKeyService.ActivateKey(accessKey);
+            var result = await _accessKeyService.ActivateKey(accessKeyRequest, accessKey);
             return result == null ? (ActionResult<ActivateKeyResponse>)BadRequest() : (ActionResult<ActivateKeyResponse>)Ok(result);
         }
         [HttpPut]
-        [Route("deactivate/{clientId}")]
-        public async Task<ActionResult<DeactivateKeyResponse>> Deactivate(string clientId,[FromBody] DeactivateKeyRequest keyRequest)
+        [Route("deactivate/{accessKey}")]
+        public async Task<ActionResult<DeactivateKeyResponse>> Deactivate(string accessKey, [FromBody] DeactivateKeyRequest keyRequest)
         {
-            var result = await _accessKeyService.DeactivateKey(keyRequest);
+            var result = await _accessKeyService.DeactivateKey(keyRequest, accessKey);
             return result == null ? (ActionResult<DeactivateKeyResponse>)BadRequest() : (ActionResult<DeactivateKeyResponse>)Ok(result);
         }
     }

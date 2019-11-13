@@ -16,6 +16,9 @@ namespace Tavisca.CAPI.AccessKey.Services.Tanslator
                 Program = key.Program,
                 ProgramGroup = key.ProgramGroup,
                 UpdatedBy = key.UpdatedBy,
+                ProgramId = key.ProgramId,
+                ClientClassicId = key.ClientClassicId,
+                ClientTenantId = key.ClientTenantId
             };
         }
     }

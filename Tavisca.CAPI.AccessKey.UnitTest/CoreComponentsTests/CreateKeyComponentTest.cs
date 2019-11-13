@@ -1,6 +1,6 @@
 ﻿using Tavisca.CAPI.AccessKey.Core.Components;
 using Tavisca.CAPI.AccessKey.MockProvider.DatabaseProvider;
-using Tavisca.CAPI.AccessKey.MockProvider.ParameterStoreProvider;
+using Tavisca.CAPI.AccessKey.MockProvider.ParameterStore;
 using Tavisca.CAPI.AccessKey.Model.Interfaces;
 using Tavisca.CAPI.AccessKey.Model.Models;
 using Xunit;
@@ -38,7 +38,7 @@ namespace Tavisca.CAPI.AccessKey.UnitTest.CoreComponentsTests
             accessKey.ClientId = "newclient1";
             var sut = new CreateKeyComponent(_databaseAdapter);
             var result = await sut.Create(accessKey);
-            Assert.False(result.IskeyActive);
+            Assert.False(result.IsKeyActive);
         }
 
         [Fact]

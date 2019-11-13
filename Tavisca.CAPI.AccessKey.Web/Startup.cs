@@ -8,8 +8,8 @@ using Tavisca.CAPI.AccessKey.Web.Middleware.Extensions;
 using Tavisca.Common.Plugins.StructureMap;
 using Tavisca.Platform.Common.Containers;
 using Tavisca.Platform.Common.Core.ServiceLocator;
+using Tavisca.CAPI.AccessKey.Web.Middleware;
 using Tavisca.CAPI.AccessKey.Web.Middleware.Extenstions;
-using capi_accesskey.Middlewares;
 using capi_accesskey.Middlewares.Extensions;
 
 namespace Tavisca.CAPI.AccessKey.Web

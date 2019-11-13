@@ -25,53 +25,53 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tavisca.CAPI.AccessKey.Core
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tavisca.CAPI.AccessKey.Web", "Tavisca.CAPI.AccessKey.Web\Tavisca.CAPI.AccessKey.Web.csproj", "{991B1B0F-53F7-484F-9B10-6F17F93BE7DB}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "5. Submodules", "5. Submodules", "{11D46349-06A0-4324-BC4F-52E317506483}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "5. Submodules", "5. Submodules", "{FE613B58-22C1-47AD-A220-65D605F25D81}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tavisca.Platform.Common.Core", "..\..\..\..\platform-common\Tavisca.Platform.Common\Tavisca.Platform.Common.Core.csproj", "{A0B5114A-F367-4FEA-B948-82C24281BA7D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tavisca.Platform.Common.Core", "..\platform-common\Tavisca.Platform.Common\Tavisca.Platform.Common.Core.csproj", "{A0B5114A-F367-4FEA-B948-82C24281BA7D}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tavisca.Platform.Common.Models.Core", "..\..\..\..\platform-common\Tavisca.Platform.Common.Models\Tavisca.Platform.Common.Models.Core.csproj", "{BF2206C1-E77D-4F2A-BB88-47F9529C9D3F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tavisca.Platform.Common.Models.Core", "..\platform-common\Tavisca.Platform.Common.Models\Tavisca.Platform.Common.Models.Core.csproj", "{BF2206C1-E77D-4F2A-BB88-47F9529C9D3F}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tavisca.Platform.Common.Plugins.Json.Core", "..\..\..\..\platform-common\Tavisca.Platform.Common.Plugins.Json\Tavisca.Platform.Common.Plugins.Json.Core.csproj", "{1B2D2E6B-1AB6-46F6-85ED-1945C60A3670}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tavisca.Platform.Common.Plugins.Json.Core", "..\platform-common\Tavisca.Platform.Common.Plugins.Json\Tavisca.Platform.Common.Plugins.Json.Core.csproj", "{1B2D2E6B-1AB6-46F6-85ED-1945C60A3670}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tavisca.Common.Plugins.RecyclableStreamPool.Core", "..\..\..\..\platform-common\Tavisca.Common.Plugins.RecyclableStreamPool\Tavisca.Common.Plugins.RecyclableStreamPool.Core.csproj", "{EBB51006-F793-4CD2-886D-68F16AB7017E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tavisca.Common.Plugins.RecyclableStreamPool.Core", "..\platform-common\Tavisca.Common.Plugins.RecyclableStreamPool\Tavisca.Common.Plugins.RecyclableStreamPool.Core.csproj", "{EBB51006-F793-4CD2-886D-68F16AB7017E}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tavisca.Common.Plugins.StatsD.Core", "..\..\..\..\platform-common\Tavisca.Common.Plugins.StatsD\Tavisca.Common.Plugins.StatsD.Core.csproj", "{7443FBC0-7F06-42AC-865A-336851EF3C0A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tavisca.Common.Plugins.StatsD.Core", "..\platform-common\Tavisca.Common.Plugins.StatsD\Tavisca.Common.Plugins.StatsD.Core.csproj", "{7443FBC0-7F06-42AC-865A-336851EF3C0A}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tavisca.Common.Plugins.StructureMap.Core", "..\..\..\..\platform-common\Tavisca.Common.Plugins.StructureMap\Tavisca.Common.Plugins.StructureMap.Core.csproj", "{0A793462-D2F0-4ADE-959F-BD8FBAF1CF9F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tavisca.Common.Plugins.StructureMap.Core", "..\platform-common\Tavisca.Common.Plugins.StructureMap\Tavisca.Common.Plugins.StructureMap.Core.csproj", "{0A793462-D2F0-4ADE-959F-BD8FBAF1CF9F}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tavisca.Common.Plugins.WebClient.Core", "..\..\..\..\platform-common\Tavisca.Common.Plugins.WebClient\Tavisca.Common.Plugins.WebClient.Core.csproj", "{72D872CE-8A16-404D-AC11-625C820319EF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tavisca.Common.Plugins.WebClient.Core", "..\platform-common\Tavisca.Common.Plugins.WebClient\Tavisca.Common.Plugins.WebClient.Core.csproj", "{72D872CE-8A16-404D-AC11-625C820319EF}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tavisca.Common.Plugins.JsonSerializer.Core", "..\..\..\..\platform-common\Tavisca.Common.Plugins.JsonSerializer\Tavisca.Common.Plugins.JsonSerializer.Core.csproj", "{7E6D40E8-8956-4085-9A52-79DDCF54EE05}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tavisca.Common.Plugins.JsonSerializer.Core", "..\platform-common\Tavisca.Common.Plugins.JsonSerializer\Tavisca.Common.Plugins.JsonSerializer.Core.csproj", "{7E6D40E8-8956-4085-9A52-79DDCF54EE05}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tavisca.Common.Plugins.Redis.Core", "..\..\..\..\platform-common\Tavisca.Common.Plugins.Redis\Tavisca.Common.Plugins.Redis.Core.csproj", "{C4E9DFD9-767C-4B31-8C0A-723169952108}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tavisca.Common.Plugins.Redis.Core", "..\platform-common\Tavisca.Common.Plugins.Redis\Tavisca.Common.Plugins.Redis.Core.csproj", "{C4E9DFD9-767C-4B31-8C0A-723169952108}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tavisca.Common.Plugins.ServiceCaller.Core", "..\..\..\..\platform-common\Tavisca.Common.Plugins.ServiceCaller\Tavisca.Common.Plugins.ServiceCaller.Core.csproj", "{5773848D-6D39-45D5-9227-EFDBB01EA219}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tavisca.Common.Plugins.ServiceCaller.Core", "..\platform-common\Tavisca.Common.Plugins.ServiceCaller\Tavisca.Common.Plugins.ServiceCaller.Core.csproj", "{5773848D-6D39-45D5-9227-EFDBB01EA219}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tavisca.Common.Plugins.Aerospike.Core", "..\..\..\..\platform-common\Tavisca.Common.Plugins.Aerospike\Tavisca.Common.Plugins.Aerospike.Core.csproj", "{174FC4F0-B84B-4B47-8767-42D877CCA8AC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tavisca.Common.Plugins.Aerospike.Core", "..\platform-common\Tavisca.Common.Plugins.Aerospike\Tavisca.Common.Plugins.Aerospike.Core.csproj", "{174FC4F0-B84B-4B47-8767-42D877CCA8AC}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tavisca.Common.Plugins.Aws.Core", "..\..\..\..\platform-common\Tavisca.Common.Plugins.Aws\Tavisca.Common.Plugins.Aws.Core.csproj", "{AB2B8641-CC79-4962-A591-EF843109B704}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tavisca.Common.Plugins.Aws.Core", "..\platform-common\Tavisca.Common.Plugins.Aws\Tavisca.Common.Plugins.Aws.Core.csproj", "{AB2B8641-CC79-4962-A591-EF843109B704}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tavisca.Common.Plugins.SessionStore.Core", "..\..\..\..\platform-common\Tavisca.Common.Plugins.SessionStore\Tavisca.Common.Plugins.SessionStore.Core.csproj", "{BD88941A-7EC9-4C86-A950-DBC7777D29B9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tavisca.Common.Plugins.SessionStore.Core", "..\platform-common\Tavisca.Common.Plugins.SessionStore\Tavisca.Common.Plugins.SessionStore.Core.csproj", "{BD88941A-7EC9-4C86-A950-DBC7777D29B9}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tavisca.Common.Plugins.Configuration.Core", "..\..\..\..\platform-common\Tavisca.Common.Plugins.Configuration\Tavisca.Common.Plugins.Configuration.Core.csproj", "{0BAC5D3C-AECD-403D-B470-51767B41F314}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tavisca.Common.Plugins.Configuration.Core", "..\platform-common\Tavisca.Common.Plugins.Configuration\Tavisca.Common.Plugins.Configuration.Core.csproj", "{0BAC5D3C-AECD-403D-B470-51767B41F314}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tavisca.Platform.Common.Tests.Core", "..\..\..\..\platform-common\Tavisca.Platform.Common.Tests.Core\Tavisca.Platform.Common.Tests.Core.csproj", "{66F9ADE7-EA6A-4F0A-B08B-7BDA79979D57}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tavisca.Platform.Common.Tests.Core", "..\platform-common\Tavisca.Platform.Common.Tests.Core\Tavisca.Platform.Common.Tests.Core.csproj", "{66F9ADE7-EA6A-4F0A-B08B-7BDA79979D57}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tavisca.Common.Plugins.Crypto.Core", "..\..\..\..\platform-common\Tavisca.Common.Plugins.Crypto\Tavisca.Common.Plugins.Crypto.Core.csproj", "{B1DFE218-29BC-436A-B866-74188E776EA2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tavisca.Common.Plugins.Crypto.Core", "..\platform-common\Tavisca.Common.Plugins.Crypto\Tavisca.Common.Plugins.Crypto.Core.csproj", "{B1DFE218-29BC-436A-B866-74188E776EA2}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tavisca.Platform.Common.WebApi.Core", "..\..\..\..\platform-common\Tavisca.Platform.Common.WebApi\Tavisca.Platform.Common.WebApi.Core.csproj", "{69DB2FCD-3F10-4E8E-A9AE-EB53E638803C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tavisca.Platform.Common.WebApi.Core", "..\platform-common\Tavisca.Platform.Common.WebApi\Tavisca.Platform.Common.WebApi.Core.csproj", "{69DB2FCD-3F10-4E8E-A9AE-EB53E638803C}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tavisca.Common.Plugins.ExchangeRate.Core", "..\..\..\..\platform-common\Tavisca.Common.Plugins.ExchangeRate\Tavisca.Common.Plugins.ExchangeRate.Core.csproj", "{E933CE7D-733A-45C3-9160-158CE5494B79}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tavisca.Common.Plugins.ExchangeRate.Core", "..\platform-common\Tavisca.Common.Plugins.ExchangeRate\Tavisca.Common.Plugins.ExchangeRate.Core.csproj", "{E933CE7D-733A-45C3-9160-158CE5494B79}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tavisca.Common.Plugins.RabbitMq.Core", "..\..\..\..\platform-common\Tavisca.Common.Plugins.RabbitMq\Tavisca.Common.Plugins.RabbitMq.Core.csproj", "{467A24FF-2CC0-4E86-A89D-526F57173460}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tavisca.Common.Plugins.RabbitMq.Core", "..\platform-common\Tavisca.Common.Plugins.RabbitMq\Tavisca.Common.Plugins.RabbitMq.Core.csproj", "{467A24FF-2CC0-4E86-A89D-526F57173460}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tavisca.Common.Plugins.BinarySerializer.Core", "..\..\..\..\platform-common\Tavisca.Common.Plugins.BinarySerializer\Tavisca.Common.Plugins.BinarySerializer.Core.csproj", "{F0AB2C84-FD7B-4481-B406-486B8C77CFBF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tavisca.Common.Plugins.BinarySerializer.Core", "..\platform-common\Tavisca.Common.Plugins.BinarySerializer\Tavisca.Common.Plugins.BinarySerializer.Core.csproj", "{F0AB2C84-FD7B-4481-B406-486B8C77CFBF}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tavisca.Common.Plugins.Cassandra.Core", "..\..\..\..\platform-common\Tavisca.Common.Plugins.Cassandra\Tavisca.Common.Plugins.Cassandra.Core.csproj", "{FD7E1C08-68FF-4000-9909-4E48B1150001}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tavisca.Common.Plugins.Cassandra.Core", "..\platform-common\Tavisca.Common.Plugins.Cassandra\Tavisca.Common.Plugins.Cassandra.Core.csproj", "{FD7E1C08-68FF-4000-9909-4E48B1150001}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tavisca.Common.Plugins.TransitCodeGenerator", "..\..\..\..\platform-common\Tavisca.Common.Plugins.TransitCodeGenerator\Tavisca.Common.Plugins.TransitCodeGenerator.csproj", "{95223FCB-0D1A-4389-96A9-205D01378AC1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tavisca.Common.Plugins.TransitCodeGenerator", "..\platform-common\Tavisca.Common.Plugins.TransitCodeGenerator\Tavisca.Common.Plugins.TransitCodeGenerator.csproj", "{95223FCB-0D1A-4389-96A9-205D01378AC1}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tavisca.Common.Plugins.Cryptography.Core", "..\..\..\..\platform-common\Tavisca.Common.Plugins.Cryptography\Tavisca.Common.Plugins.Cryptography.Core.csproj", "{2855E666-80C0-48CC-9781-E28A29B76BD1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tavisca.Common.Plugins.Cryptography.Core", "..\platform-common\Tavisca.Common.Plugins.Cryptography\Tavisca.Common.Plugins.Cryptography.Core.csproj", "{2855E666-80C0-48CC-9781-E28A29B76BD1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -210,30 +210,30 @@ Global
 		{04D878EC-43B2-4E72-B121-6104739E2562} = {FE65F069-8981-41D5-B656-0A31B6C98F65}
 		{8D4ABCEC-F683-4971-8231-F0F968C53181} = {5A16842B-38BF-444C-8B33-4DBA7F0B3563}
 		{991B1B0F-53F7-484F-9B10-6F17F93BE7DB} = {FC16A1B1-D4B4-4D40-8784-548D0BBDABE8}
-		{11D46349-06A0-4324-BC4F-52E317506483} = {FE0831ED-AFA0-425C-86A4-5A277BFCC41D}
-		{A0B5114A-F367-4FEA-B948-82C24281BA7D} = {11D46349-06A0-4324-BC4F-52E317506483}
-		{BF2206C1-E77D-4F2A-BB88-47F9529C9D3F} = {11D46349-06A0-4324-BC4F-52E317506483}
-		{1B2D2E6B-1AB6-46F6-85ED-1945C60A3670} = {11D46349-06A0-4324-BC4F-52E317506483}
-		{EBB51006-F793-4CD2-886D-68F16AB7017E} = {11D46349-06A0-4324-BC4F-52E317506483}
-		{7443FBC0-7F06-42AC-865A-336851EF3C0A} = {11D46349-06A0-4324-BC4F-52E317506483}
-		{0A793462-D2F0-4ADE-959F-BD8FBAF1CF9F} = {11D46349-06A0-4324-BC4F-52E317506483}
-		{72D872CE-8A16-404D-AC11-625C820319EF} = {11D46349-06A0-4324-BC4F-52E317506483}
-		{7E6D40E8-8956-4085-9A52-79DDCF54EE05} = {11D46349-06A0-4324-BC4F-52E317506483}
-		{C4E9DFD9-767C-4B31-8C0A-723169952108} = {11D46349-06A0-4324-BC4F-52E317506483}
-		{5773848D-6D39-45D5-9227-EFDBB01EA219} = {11D46349-06A0-4324-BC4F-52E317506483}
-		{174FC4F0-B84B-4B47-8767-42D877CCA8AC} = {11D46349-06A0-4324-BC4F-52E317506483}
-		{AB2B8641-CC79-4962-A591-EF843109B704} = {11D46349-06A0-4324-BC4F-52E317506483}
-		{BD88941A-7EC9-4C86-A950-DBC7777D29B9} = {11D46349-06A0-4324-BC4F-52E317506483}
-		{0BAC5D3C-AECD-403D-B470-51767B41F314} = {11D46349-06A0-4324-BC4F-52E317506483}
-		{66F9ADE7-EA6A-4F0A-B08B-7BDA79979D57} = {11D46349-06A0-4324-BC4F-52E317506483}
-		{B1DFE218-29BC-436A-B866-74188E776EA2} = {11D46349-06A0-4324-BC4F-52E317506483}
-		{69DB2FCD-3F10-4E8E-A9AE-EB53E638803C} = {11D46349-06A0-4324-BC4F-52E317506483}
-		{E933CE7D-733A-45C3-9160-158CE5494B79} = {11D46349-06A0-4324-BC4F-52E317506483}
-		{467A24FF-2CC0-4E86-A89D-526F57173460} = {11D46349-06A0-4324-BC4F-52E317506483}
-		{F0AB2C84-FD7B-4481-B406-486B8C77CFBF} = {11D46349-06A0-4324-BC4F-52E317506483}
-		{FD7E1C08-68FF-4000-9909-4E48B1150001} = {11D46349-06A0-4324-BC4F-52E317506483}
-		{95223FCB-0D1A-4389-96A9-205D01378AC1} = {11D46349-06A0-4324-BC4F-52E317506483}
-		{2855E666-80C0-48CC-9781-E28A29B76BD1} = {11D46349-06A0-4324-BC4F-52E317506483}
+		{FE613B58-22C1-47AD-A220-65D605F25D81} = {FE0831ED-AFA0-425C-86A4-5A277BFCC41D}
+		{A0B5114A-F367-4FEA-B948-82C24281BA7D} = {FE613B58-22C1-47AD-A220-65D605F25D81}
+		{BF2206C1-E77D-4F2A-BB88-47F9529C9D3F} = {FE613B58-22C1-47AD-A220-65D605F25D81}
+		{1B2D2E6B-1AB6-46F6-85ED-1945C60A3670} = {FE613B58-22C1-47AD-A220-65D605F25D81}
+		{EBB51006-F793-4CD2-886D-68F16AB7017E} = {FE613B58-22C1-47AD-A220-65D605F25D81}
+		{7443FBC0-7F06-42AC-865A-336851EF3C0A} = {FE613B58-22C1-47AD-A220-65D605F25D81}
+		{0A793462-D2F0-4ADE-959F-BD8FBAF1CF9F} = {FE613B58-22C1-47AD-A220-65D605F25D81}
+		{72D872CE-8A16-404D-AC11-625C820319EF} = {FE613B58-22C1-47AD-A220-65D605F25D81}
+		{7E6D40E8-8956-4085-9A52-79DDCF54EE05} = {FE613B58-22C1-47AD-A220-65D605F25D81}
+		{C4E9DFD9-767C-4B31-8C0A-723169952108} = {FE613B58-22C1-47AD-A220-65D605F25D81}
+		{5773848D-6D39-45D5-9227-EFDBB01EA219} = {FE613B58-22C1-47AD-A220-65D605F25D81}
+		{174FC4F0-B84B-4B47-8767-42D877CCA8AC} = {FE613B58-22C1-47AD-A220-65D605F25D81}
+		{AB2B8641-CC79-4962-A591-EF843109B704} = {FE613B58-22C1-47AD-A220-65D605F25D81}
+		{BD88941A-7EC9-4C86-A950-DBC7777D29B9} = {FE613B58-22C1-47AD-A220-65D605F25D81}
+		{0BAC5D3C-AECD-403D-B470-51767B41F314} = {FE613B58-22C1-47AD-A220-65D605F25D81}
+		{66F9ADE7-EA6A-4F0A-B08B-7BDA79979D57} = {FE613B58-22C1-47AD-A220-65D605F25D81}
+		{B1DFE218-29BC-436A-B866-74188E776EA2} = {FE613B58-22C1-47AD-A220-65D605F25D81}
+		{69DB2FCD-3F10-4E8E-A9AE-EB53E638803C} = {FE613B58-22C1-47AD-A220-65D605F25D81}
+		{E933CE7D-733A-45C3-9160-158CE5494B79} = {FE613B58-22C1-47AD-A220-65D605F25D81}
+		{467A24FF-2CC0-4E86-A89D-526F57173460} = {FE613B58-22C1-47AD-A220-65D605F25D81}
+		{F0AB2C84-FD7B-4481-B406-486B8C77CFBF} = {FE613B58-22C1-47AD-A220-65D605F25D81}
+		{FD7E1C08-68FF-4000-9909-4E48B1150001} = {FE613B58-22C1-47AD-A220-65D605F25D81}
+		{95223FCB-0D1A-4389-96A9-205D01378AC1} = {FE613B58-22C1-47AD-A220-65D605F25D81}
+		{2855E666-80C0-48CC-9781-E28A29B76BD1} = {FE613B58-22C1-47AD-A220-65D605F25D81}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {A3D539BD-00E9-4965-B123-1307CF6F84D1}

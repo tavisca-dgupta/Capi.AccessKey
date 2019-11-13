@@ -37,6 +37,12 @@ namespace Tavisca.CAPI.AccessKey.Model.Models.Common
             public static readonly string EnvironmentToken = "cnx-environment-token";
             public const string HttpStatusCode = "httpStatusCode";
         }
+        public static class InstanceName
+        {
+            public static readonly string Mock = "mock";
+            public static readonly string RemoteConfigurationStore = "consul";
+            public static readonly string SensitiveDataProvider = "parameter_store";
+        }
         public static class Consul
         {
             public static class ApplicationSettings

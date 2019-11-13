@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp2.2</TargetFramework>
-
+<SonarQubeTestProject>true</SonarQubeTestProject>
     <IsPackable>false</IsPackable>
   </PropertyGroup>
 
@@ -17,11 +17,11 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Tavisca.CAPI.AccessKey.Core\Tavisca.CAPI.AccessKey.Core.csproj" />
     <ProjectReference Include="..\Tavisca.CAPI.AccessKey.MockProvider\Tavisca.CAPI.AccessKey.MockProvider.csproj" />
     <ProjectReference Include="..\Tavisca.CAPI.AccessKey.Model\Tavisca.CAPI.AccessKey.Model.csproj" />
     <ProjectReference Include="..\Tavisca.CAPI.AccessKey.Services\Tavisca.CAPI.AccessKey.Services.csproj" />
     <ProjectReference Include="..\Tavisca.CAPI.AccessKey.Web\Tavisca.CAPI.AccessKey.Web.csproj" />
+	
   </ItemGroup>
 
 </Project>

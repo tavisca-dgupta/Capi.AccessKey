@@ -21,7 +21,7 @@ namespace Tavisca.CAPI.AccessKey.UnitTest.ServiceTranslatorTests
         {
             Assert.Equal(accessKeyModel.ClientName, accessKeyResponse.ClientName);
             Assert.Equal(accessKeyModel.AccessKey, accessKeyResponse.AccessKey);
-            Assert.Equal(accessKeyModel.IskeyActive, accessKeyResponse.IskeyActive);
+            Assert.Equal(accessKeyModel.IsKeyActive, accessKeyResponse.IsKeyActive);
             Assert.Equal(accessKeyModel.UpdatedBy,accessKeyResponse.UpdatedBy);
         }
 
@@ -30,7 +30,7 @@ namespace Tavisca.CAPI.AccessKey.UnitTest.ServiceTranslatorTests
             return new AccessKeyModel()
             {
                 AccessKey = "abcdefg",
-                IskeyActive = true,
+                IsKeyActive = true,
                 ClientId = "1234567",
                 ClientName = "Citi",
                 Program = "Program1",

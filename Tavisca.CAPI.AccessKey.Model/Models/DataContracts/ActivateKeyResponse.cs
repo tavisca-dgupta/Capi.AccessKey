@@ -2,10 +2,10 @@
 {
     public class ActivateKeyResponse
     {
-        public string ClientId { get; set; }
-        public string ClientName { get; set; }
         public string AccessKey { get; set; }
-        public bool IskeyActive { get; set; }
+        public bool IsKeyActive { get; set; }
         public string UpdatedBy { get; set; }
+        public string ClientTenantId { get; set; }
+        public string LastUpdatedOn { get; set; }
     }
 }

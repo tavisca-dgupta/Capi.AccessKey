@@ -5,18 +5,15 @@ namespace Tavisca.CAPI.AccessKey.Services.Tanslator
 {
     public static class DeactivateKeyRequestTranslator
     {
-        public static AccessKeyModel ToAccessKeyModel(this DeactivateKeyRequest key)
+        public static AccessKeyModel ToAccessKeyModel(this DeactivateKeyRequest key, string accessKey)
         {
             return key == null
                 ? null
                 : new AccessKeyModel()
-            {
-                ClientId = key.ClientId,
-                AccessKey = key.AccessKey,
-                ClientName = key.ClientName,
-                IskeyActive = key.IskeyActive,
-                UpdatedBy = key.UpdatedBy,
-            };
+                {
+                    AccessKey = accessKey,
+                    UpdatedBy = key.UpdatedBy
+                };
         }
     }
 }

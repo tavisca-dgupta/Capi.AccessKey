@@ -43,10 +43,9 @@ namespace Tavisca.CAPI.AccessKey.MockProvider.DatabaseProvider
             var clients = await JsonFileReader.ReadAllJsonObject(_filename);
             for (int i = 0; i < clients.Count; i++)
             {
-                if (clients[i].ClientId == client.ClientId)
+                if (clients[i].AccessKey == client.AccessKey)
                 {
-                    clients[i].IskeyActive = false;
-                    clients[i].UpdateDate = DateTime.Today.ToString("dd-MM-yyyy");
+                    clients[i].IsKeyActive = false;
                     clients[i].UpdatedBy = client.UpdatedBy;
                     break;
                 }
@@ -54,17 +53,17 @@ namespace Tavisca.CAPI.AccessKey.MockProvider.DatabaseProvider
             var deactivate = await JsonFileWriter.WriteToJsonFile(clients);
             if (deactivate==true)
             {
-                return await GetClientById(client.ClientId);
+                return await GetClientByAccessKey(client.AccessKey);
             }
             throw ServerSide.AccessKeyNotDeactivated();
          }
 
-        public async Task<bool> IsKeyPresent(string clientId)
+        public async Task<bool> IsKeyPresent(string accessKey)
         {
             List<AccessKeyModel> clients = await GetAllClients();
             for (int i = 0; i < clients.Count; i++)
             {
-                if (clients[i].ClientId.Equals(clientId))
+                if (clients[i].AccessKey.Equals(accessKey))
                     return true;
             }
             return false;
@@ -74,8 +73,6 @@ namespace Tavisca.CAPI.AccessKey.MockProvider.DatabaseProvider
         {
             var clients = await JsonFileReader.ReadAllJsonObject(_filename);
             GetAllKeysDataResponse accessKey = key.ToGetAllKeysResponseModel();
-            accessKey.CreateDate = DateTime.Today.ToString("dd-MM-yyyy");
-            accessKey.UpdateDate = DateTime.Today.ToString("dd-MM-yyyy");
             clients.Add(accessKey);
             var createStatus = await JsonFileWriter.WriteToJsonFile(clients);
             if (createStatus)
@@ -88,10 +85,9 @@ namespace Tavisca.CAPI.AccessKey.MockProvider.DatabaseProvider
             var clients = await JsonFileReader.ReadAllJsonObject(_filename);
             for (int i = 0; i < clients.Count; i++)
             {
-                if (clients[i].ClientId == client.ClientId)
+                if (clients[i].AccessKey == client.AccessKey)
                 {
-                    clients[i].IskeyActive = true;
-                    clients[i].UpdateDate = DateTime.Today.ToString("dd-MM-yyyy");
+                    clients[i].IsKeyActive = true;
                     clients[i].UpdatedBy = client.UpdatedBy;
                     break;
                 }
@@ -99,9 +95,20 @@ namespace Tavisca.CAPI.AccessKey.MockProvider.DatabaseProvider
             var activate = await JsonFileWriter.WriteToJsonFile(clients);
             if (activate == true)
             {
-                return await GetClientById(client.ClientId);
+                return await GetClientByAccessKey(client.AccessKey);
             }
             throw ServerSide.AccesskeyNotActivated();
+        }
+
+        public async Task<AccessKeyModel> GetClientByAccessKey(string accessKey)
+        {
+            List<AccessKeyModel> clients = await GetAllClients();
+            for (int i = 0; i < clients.Count; i++)
+            {
+                if (clients[i].AccessKey.Equals(accessKey))
+                    return clients[i];
+            }
+            throw ClientSide.ClientNotFound();
         }
     }
 }

@@ -34,10 +34,10 @@ namespace Tavisca.CAPI.AccessKey.UnitTest.DatabaseAdapterTests
             accessKey.ClientId = "1edb9skbh8g";
             accessKey.ClientName = "Citi Bank";
             accessKey.AccessKey = "ad9ff893-bba2-44be-b961-63ceccab24a8";
-            accessKey.IskeyActive = true;
+            accessKey.IsKeyActive = true;
             accessKey.UpdatedBy = "anil kadam";
             var client = await database.DeactivateKey(accessKey);
-            Assert.False(client.IskeyActive);
+            Assert.False(client.IsKeyActive);
         }
         [Fact]
         public async Task Activate_a_key()
@@ -47,10 +47,10 @@ namespace Tavisca.CAPI.AccessKey.UnitTest.DatabaseAdapterTests
             accessKey.ClientId = "1edb9skbh8g";
             accessKey.ClientName = "Citi Bank";
             accessKey.AccessKey = "ad9ff893-bba2-44be-b961-63ceccab24a8";
-            accessKey.IskeyActive = false;
+            accessKey.IsKeyActive = false;
             accessKey.UpdatedBy = "anil kadam";
             var client = await database.ActivateKey(accessKey);
-            Assert.True(client.IskeyActive);
+            Assert.True(client.IsKeyActive);
         }
 
         [Fact]
@@ -61,7 +61,7 @@ namespace Tavisca.CAPI.AccessKey.UnitTest.DatabaseAdapterTests
             accessKey.ClientId = "1edb9skbh8g";
             accessKey.ClientName = "Citi Bank";
             accessKey.AccessKey = "ad9ff893-bba2-44be-b961-63ceccab24a8";
-            accessKey.IskeyActive = false;
+            accessKey.IsKeyActive = false;
             accessKey.UpdatedBy = "anil kadam";
             var client = await database.GetClientById(accessKey.ClientId);
             Assert.Equal("ad9ff893-bba2-44be-b961-63ceccab24a8", client.AccessKey);
