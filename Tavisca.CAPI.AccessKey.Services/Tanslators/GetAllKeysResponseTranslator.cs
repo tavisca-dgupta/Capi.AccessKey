@@ -3,9 +3,9 @@ using Tavisca.CAPI.AccessKey.Model.Models.DataContracts;
 
 namespace Tavisca.CAPI.AccessKey.Services.Tanslator
 {
-    public static class AccessKeytoGetAllResponseTranslator
+    public static class GetAllKeysResponseTranslator
     {
-        public static GetAllKeysResponse ToAccesKeyDetail(this AccessKeyModel key)
+        public static GetAllKeysResponse ToGetAllKeysResponse(this AccessKeyModel key)
         {
             return key == null
                 ? null

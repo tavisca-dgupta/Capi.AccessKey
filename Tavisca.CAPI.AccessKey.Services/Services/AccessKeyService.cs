@@ -29,8 +29,8 @@ namespace Tavisca.CAPI.AccessKey.Services.Services
             List<AccessKeyModel> clientKeys = await _accessKey.GetAll();
             for (int i = 0; i < clientKeys.Count; i++)
             {
-                if (AccessKeytoGetAllResponseTranslator.ToAccesKeyDetail(clientKeys[i]) != null)
-                    _keys.Add(AccessKeytoGetAllResponseTranslator.ToAccesKeyDetail(clientKeys[i]));
+                if (GetAllKeysResponseTranslator.ToGetAllKeysResponse(clientKeys[i]) != null)
+                    _keys.Add(GetAllKeysResponseTranslator.ToGetAllKeysResponse(clientKeys[i]));
             }
             return _keys;
         }

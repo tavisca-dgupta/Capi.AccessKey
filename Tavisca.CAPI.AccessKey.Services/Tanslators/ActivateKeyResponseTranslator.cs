@@ -3,13 +3,13 @@ using Tavisca.CAPI.AccessKey.Model.Models.DataContracts;
 
 namespace Tavisca.CAPI.AccessKey.Services.Tanslator
 {
-    public static class AccessKeyModelToActivateKeyResponse
+    public static class ActivateKeyResponseTranslator
     {
         public static ActivateKeyResponse ToActivateKeyResponse(this AccessKeyModel keyModel)
         {
             return keyModel == null
                 ? null
-                : new ActivateKeyResponse()
+                : new Model.Models.DataContracts.ActivateKeyResponse()
             {
                 AccessKey = keyModel.AccessKey,
                 IsKeyActive = keyModel.IsKeyActive,
