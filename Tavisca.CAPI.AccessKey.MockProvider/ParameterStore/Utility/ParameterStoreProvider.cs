@@ -12,14 +12,7 @@ namespace Tavisca.CAPI.AccessKey.MockProvider.ParameterStore.Utility
 {
     public class ParameterStoreProvider : IParameterStoreProvider
     {
-        private AmazonSimpleSystemsManagementClient _client;
-        public ParameterStoreProvider(AmazonSimpleSystemsManagementClient client)
-        {
-            if (client != null)
-                _client = client;
-            else
-                _client = GetClient();
-        }
+        public AmazonSimpleSystemsManagementClient _client;
         public async Task<PutParameterResponse> PutParameter(PutParameterRequest request)
         {
             if (_client == null)
