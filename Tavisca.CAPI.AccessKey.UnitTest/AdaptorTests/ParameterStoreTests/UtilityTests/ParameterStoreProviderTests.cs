@@ -26,7 +26,8 @@ namespace Tavisca.CAPI.AccessKey.UnitTest.AdaptorTests.ParameterStoreTests.Utili
             var putParameterResponse = new PutParameterResponse();
             var putParameterRequest = new PutParameterRequest() { Name = "key_1", Value = "Value_1",Overwrite=false,Type= ParameterType.SecureString };
             _mockClient.Setup(mc => mc.PutParameterAsync(putParameterRequest, default)).ReturnsAsync(putParameterResponse);
-            var parameterStoreProvider = new ParameterStoreProvider(_mockClient.Object);
+            var parameterStoreProvider = new ParameterStoreProvider();
+            parameterStoreProvider._client = _mockClient.Object;
 
             var responseFromPSProvider = await parameterStoreProvider.PutParameter(putParameterRequest);
 
@@ -38,7 +39,8 @@ namespace Tavisca.CAPI.AccessKey.UnitTest.AdaptorTests.ParameterStoreTests.Utili
             var exception = new Exception();
             var putParameterRequest = new PutParameterRequest() { Name = "key_1", Value = "Value_1", Overwrite = false, Type = ParameterType.SecureString };
             _mockClient.Setup(mc => mc.PutParameterAsync(It.IsAny<PutParameterRequest>(), default)).ThrowsAsync(exception);
-            var parameterStoreProvider = new ParameterStoreProvider(_mockClient.Object);
+            var parameterStoreProvider = new ParameterStoreProvider();
+            parameterStoreProvider._client = _mockClient.Object;
 
             var thrownException = await Assert.ThrowsAsync<Exception>(() => parameterStoreProvider.PutParameter(putParameterRequest));
 
@@ -51,7 +53,8 @@ namespace Tavisca.CAPI.AccessKey.UnitTest.AdaptorTests.ParameterStoreTests.Utili
             var deleteParameterResponse = new DeleteParameterResponse();
             var deleteParameterRequest = new DeleteParameterRequest() { Name = "key_1" };
             _mockClient.Setup(mc => mc.DeleteParameterAsync(deleteParameterRequest, default)).ReturnsAsync(deleteParameterResponse);
-            var parameterStoreProvider = new ParameterStoreProvider(_mockClient.Object);
+            var parameterStoreProvider = new ParameterStoreProvider();
+            parameterStoreProvider._client = _mockClient.Object;
 
             var responseFromPSProvider = await parameterStoreProvider.DeleteParameter(deleteParameterRequest);
 
@@ -63,7 +66,8 @@ namespace Tavisca.CAPI.AccessKey.UnitTest.AdaptorTests.ParameterStoreTests.Utili
             var exception = new Exception();
             var deleteParameterRequest = new DeleteParameterRequest() { Name = "key_1" };
             _mockClient.Setup(mc => mc.DeleteParameterAsync(It.IsAny<DeleteParameterRequest>(), default)).ThrowsAsync(exception);
-            var parameterStoreProvider = new ParameterStoreProvider(_mockClient.Object);
+            var parameterStoreProvider = new ParameterStoreProvider();
+            parameterStoreProvider._client = _mockClient.Object;
 
             var thrownException = await Assert.ThrowsAsync<Exception>(() => parameterStoreProvider.DeleteParameter(deleteParameterRequest));
 
@@ -73,7 +77,8 @@ namespace Tavisca.CAPI.AccessKey.UnitTest.AdaptorTests.ParameterStoreTests.Utili
         [Fact]
         public void GetCLient_method_shall_return_valid_AmazonSimpleSystemsManagementClient()
         {
-            var parameterStoreProvider = new ParameterStoreProvider(_mockClient.Object);
+            var parameterStoreProvider = new ParameterStoreProvider();
+            parameterStoreProvider._client = _mockClient.Object;
             var client = parameterStoreProvider.GetClient();
 
             Assert.NotNull(client);
